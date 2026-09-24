@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Commandez vos vidéos courtes pour opticiens : nombre de vidéos, style, logo et identité visuelle. Devis par e-mail, rien à payer avant votre accord.">
+<meta name="theme-color" content="#f8f7f4">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f8f7f4'/%3E%3Ccircle cx='10' cy='17' r='5.5' fill='none' stroke='%23151412' stroke-width='1.8'/%3E%3Ccircle cx='22' cy='17' r='5.5' fill='none' stroke='%23151412' stroke-width='1.8'/%3E%3Cpath d='M15.5 16.2q.5-1.4 1 0' fill='none' stroke='%23151412' stroke-width='1.8'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://sacharth.github.io/showreel-opticiens/commande/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://sacharth.github.io/showreel-opticiens/commande/">
+<meta property="og:title" content="Commander vos vidéos · Opticiens">
+<meta property="og:description" content="Nombre de vidéos, style, logo et identité visuelle : décrivez votre projet et recevez votre devis par e-mail.">
+<meta property="og:image" content="https://sacharth.github.io/showreel-opticiens/og.jpg?v=2">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Commander vos vidéos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@400;500&display=swap">
+<style>
+/* Même ambiance claire que le showreel */
+:root{
+  color-scheme:light;
+  --paper:#f8f7f4;
+  --ink:#151412;
+  --soft:#45413b;
+  --muted:#5f5a53;
+  --italic:#6b665e;
+  --line:#e0ddd7;
+  --edge:#c9c3b9;
+  --tile:#ebe9e4;
+  --field:#fdfcfa;
+  --gilt:#b59c6b;
+  --error:#a3321f;
+  --ok:#2e6a44;
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --sans:"Jost","Futura","Avenir Next",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:24px}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button{touch-action:manipulation}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,4.5vw,56px);padding-block:clamp(18px,3vw,28px) clamp(40px,6vw,72px)}
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.eyebrow{margin:0;font:500 12px/1.5 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.eyebrow.rule{display:flex;align-items:center;gap:14px}
+.eyebrow.rule::before{content:"";width:28px;height:1px;background:var(--gilt);flex:none}
+
+.topline{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 24px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.topline a{color:var(--ink);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:end;padding-top:clamp(44px,7vw,96px)}
+@media (max-width:900px){.hero{grid-template-columns:minmax(0,1fr)}}
+.hero-title{display:grid;gap:clamp(18px,2.4vw,28px)}
+h1{margin:0;font:400 clamp(42px,6.2vw,86px)/.98 var(--display);letter-spacing:-.018em}
+h1 span,h1 em{display:block}
+h1 em{font-style:italic;color:var(--italic)}
+.hero-side{display:grid;gap:26px}
+.lede{margin:0;max-width:46ch;color:var(--soft);font-size:clamp(17px,1.4vw,19px)}
+
+.pairs{margin:0;display:grid}
+.pairs div{display:grid;grid-template-columns:minmax(110px,38%) minmax(0,1fr);align-items:baseline;gap:16px;padding-block:13px;border-top:1px solid var(--line)}
+.pairs div:last-child{border-bottom:1px solid var(--line)}
+.pairs dt{font:500 12px/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pairs dd{margin:0;font-size:16px;color:var(--ink);overflow-wrap:anywhere}
+@media (max-width:420px){.pairs div{grid-template-columns:minmax(0,1fr);gap:2px}}
+
+/* Formulaire + récapitulatif */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,340px);gap:clamp(40px,6vw,96px);align-items:start;margin-top:clamp(40px,6vw,88px)}
+@media (max-width:1020px){.layout{grid-template-columns:minmax(0,1fr)}}
+.form-body{margin:0;padding:0;border:0;min-width:0}
+
+.step{padding-block:clamp(36px,5vw,60px);border-top:1px solid var(--line)}
+.step-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(14px,2.2vw,28px);margin-bottom:clamp(24px,3vw,36px)}
+.step-num{font:italic 400 clamp(26px,2.8vw,36px)/1 var(--display);color:var(--gilt);font-variant-numeric:lining-nums;min-width:1.3em}
+.step-title{display:grid;gap:12px;min-width:0}
+h2{margin:0;font:400 clamp(30px,3.4vw,44px)/1.05 var(--display);letter-spacing:-.01em}
+h2 em{font-style:italic;color:var(--italic)}
+.step-intro{margin:2px 0 0;max-width:54ch;color:var(--soft);font-size:16.5px}
+.step-intro a{color:var(--ink);text-underline-offset:.2em;text-decoration-thickness:1px;white-space:nowrap}
+@media (max-width:900px){.form-body>.step:first-child{border-top:0;padding-top:8px}}
+@media (max-width:620px){
+  .step-head{align-items:center;row-gap:12px}
+  .step-title{display:contents}
+  .step-title h2,.step-title .step-intro{grid-column:1/-1}
+}
+
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 24px}
+@media (max-width:620px){.fields{grid-template-columns:minmax(0,1fr)}}
+.field{display:grid;gap:8px;min-width:0;align-content:start}
+.wide{grid-column:1/-1}
+.label{font:500 11.5px/1.5 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.req{color:var(--gilt);margin-left:2px}
+.hint{margin:0;font-size:14.5px;line-height:1.5;color:var(--muted)}
+.err{margin:0;font-size:14.5px;line-height:1.45;color:var(--error)}
+fieldset.group{margin:0;padding:0;border:0;min-width:0}
+fieldset.group legend{float:left;width:100%;padding:0;margin:0 0 10px}
+fieldset.group legend + *{clear:both}
+fieldset.group .hint{margin:-4px 0 10px}
+
+.input{display:block;width:100%;min-height:52px;margin:0;font:400 17px/1.45 var(--sans);color:var(--ink);background:var(--field);border:1px solid var(--edge);border-radius:0;padding:12px 14px;-webkit-appearance:none;appearance:none;transition:border-color .2s,box-shadow .2s}
+textarea.input{min-height:128px;resize:vertical}
+.input::placeholder{color:#9b958c;opacity:1}
+.input:hover{border-color:#a8a197}
+.input:focus{outline:none;border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.input[aria-invalid="true"]{border-color:var(--error);box-shadow:inset 0 0 0 1px var(--error)}
+input[type="date"].input{min-height:52px;line-height:1.2}
+
+/* Styles de vidéo */
+.styles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,20px)}
+.style-card{display:grid;grid-template-rows:auto 1fr;min-width:0;background:var(--field);border:1px solid var(--line);transition:border-color .25s}
+.style-card.is-on{border-color:var(--ink)}
+.style-media{position:relative;height:0;padding-top:125%;overflow:hidden;background:var(--tile)}
+.style-media img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}
+.style-count{position:absolute;top:10px;left:10px;padding:5px 9px;background:var(--ink);color:var(--paper);font:500 11px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;opacity:0;transform:translateY(-3px);transition:opacity .25s,transform .25s}
+.is-on .style-count{opacity:1;transform:none}
+.style-body{display:grid;align-content:space-between;gap:16px;padding:16px}
+.style-text{display:grid;gap:6px}
+.style-body h3{margin:0;font:400 23px/1.15 var(--display);letter-spacing:-.005em}
+.style-body h3 em{font-style:italic;color:var(--italic)}
+.style-body p{margin:0;font-size:14.5px;line-height:1.5;color:var(--soft)}
+.stepper{display:grid;grid-template-columns:46px minmax(0,1fr) 46px;height:46px;border:1px solid var(--edge);background:var(--paper)}
+.stepper button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;place-items:center;color:var(--ink);transition:background .2s}
+.stepper button:hover{background:var(--tile)}
+.stepper button:focus-visible{outline:1px solid var(--ink);outline-offset:-4px}
+.stepper button[aria-disabled="true"]{color:#b7b1a7;cursor:default;background:none}
+.stepper svg{width:16px;height:16px}
+.stepper input{width:100%;min-width:0;margin:0;padding:0;border:0;border-inline:1px solid var(--edge);border-radius:0;background:var(--field);text-align:center;font:500 18px/1 var(--sans);font-variant-numeric:tabular-nums;color:var(--ink);-moz-appearance:textfield;appearance:textfield}
+.stepper input::-webkit-outer-spin-button,.stepper input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.stepper input:focus{outline:none;box-shadow:inset 0 0 0 1px var(--ink)}
+@media (max-width:720px){
+  .styles{grid-template-columns:minmax(0,1fr)}
+  .style-card{grid-template-columns:108px minmax(0,1fr);grid-template-rows:auto}
+  .style-media{height:auto;padding-top:0;min-height:100%}
+  .style-count{top:8px;left:8px;padding:4px 7px;font-size:10px}
+  .style-body{padding:14px}
+}
+/* Colonne étroite (tablette, petit portable avec le récapitulatif à droite) : même présentation que sur téléphone */
+#order{container-type:inline-size}
+@container (max-width:600px){
+  .styles{grid-template-columns:minmax(0,1fr)}
+  .style-card{grid-template-columns:108px minmax(0,1fr);grid-template-rows:auto}
+  .style-media{height:auto;padding-top:0;min-height:100%}
+  .style-count{top:8px;left:8px;padding:4px 7px;font-size:10px}
+  .style-body{padding:14px}
+}
+.tally{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 20px;margin-top:24px;padding-top:16px;border-top:1px solid var(--line)}
+.tally p{margin:0}
+.tally-count{font:400 30px/1.1 var(--display);font-variant-numeric:lining-nums}
+.tally-count em{font-style:italic;color:var(--italic);font-size:.8em}
+.tally-budget{font-size:16.5px;color:var(--soft)}
+.tally + .hint{margin-top:6px;max-width:62ch}
+#e-videos{margin-top:12px}
+#f-mannequins-wrap{margin-top:28px}
+
+/* Pastilles de choix */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative;display:inline-flex}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:9px 16px;border:1px solid var(--edge);background:var(--field);font:400 15.5px/1.2 var(--sans);color:var(--ink);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.chip:hover span{border-color:var(--ink)}
+.chip input:checked + span{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.chip input:focus-visible + span{outline:1px solid var(--ink);outline-offset:3px}
+.checks{display:grid;gap:12px}
+.check{display:flex;align-items:flex-start;gap:12px;cursor:pointer;font-size:16.5px;line-height:1.45}
+.check input{flex:none;width:20px;height:20px;margin:2px 0 0;border:1px solid var(--edge);border-radius:0;background:var(--field);-webkit-appearance:none;appearance:none;cursor:pointer;transition:background-color .2s,border-color .2s}
+.check input:checked{border-color:var(--ink);background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.4l3.3 3.3L15 7' fill='none' stroke='%23f8f7f4' stroke-width='1.6'/%3E%3C/svg%3E") center/18px no-repeat}
+.check input:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
+
+/* Dépôt de fichiers */
+.drop{display:grid;gap:10px}
+.drop-zone{all:unset;box-sizing:border-box;cursor:pointer;display:grid;justify-items:center;gap:4px;padding:26px 18px;border:1px dashed #b3aca1;background:var(--field);text-align:center;transition:border-color .2s,background .2s}
+.drop-zone:hover,.drop.is-over .drop-zone{border-color:var(--ink);background:#f2f0eb}
+.drop-zone:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
+.drop-zone svg{width:26px;height:26px;margin-bottom:6px;color:var(--ink)}
+.drop-title{font:500 16px/1.3 var(--sans);color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.22em}
+.drop-sub{font-size:14px;line-height:1.4;color:var(--muted)}
+.form-body:disabled .drop-zone{cursor:default;opacity:.6}
+.files{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.file{display:grid;grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:12px;padding:8px 6px 8px 8px;border:1px solid var(--line);background:var(--field)}
+.file-thumb{width:48px;height:48px;display:grid;place-items:center;overflow:hidden;background:var(--tile)}
+.file-thumb img{width:100%;height:100%;object-fit:contain}
+.file-ext{font:500 10.5px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.file-text{display:grid;min-width:0}
+.file-name{font-size:15px;line-height:1.35;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.file-meta{font-size:13px;line-height:1.4;color:var(--muted)}
+.file[data-state="sent"] .file-meta{color:var(--ok)}
+.file[data-state="failed"] .file-meta{color:var(--error)}
+.file[data-state="sending"] .file-meta{color:var(--ink)}
+.file-remove{all:unset;box-sizing:border-box;cursor:pointer;width:40px;height:40px;display:grid;place-items:center;color:var(--muted);transition:color .2s}
+.file-remove:hover{color:var(--ink)}
+.file-remove:focus-visible{outline:1px solid var(--ink);outline-offset:-4px}
+.file-remove svg{width:18px;height:18px}
+.form-body:disabled .file-remove{visibility:hidden}
+
+/* Couleurs */
+.swatches{display:flex;flex-wrap:wrap;gap:10px}
+.swatch{display:flex;align-items:center;gap:10px;padding:5px 4px 5px 5px;border:1px solid var(--edge);background:var(--field)}
+.swatch input{width:40px;height:40px;padding:0;border:0;border-radius:0;background:none;cursor:pointer;-webkit-appearance:none;appearance:none}
+.swatch input::-webkit-color-swatch-wrapper{padding:0}
+.swatch input::-webkit-color-swatch{border:1px solid rgba(21,20,18,.14);border-radius:0}
+.swatch input::-moz-color-swatch{border:1px solid rgba(21,20,18,.14);border-radius:0}
+.swatch input:focus-visible{outline:1px solid var(--ink);outline-offset:2px}
+.swatch code{font:500 13.5px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.02em}
+.swatch button{all:unset;box-sizing:border-box;cursor:pointer;width:32px;height:32px;display:grid;place-items:center;color:var(--muted)}
+.swatch button:hover{color:var(--ink)}
+.swatch button:focus-visible{outline:1px solid var(--ink);outline-offset:-3px}
+.swatch button svg{width:15px;height:15px}
+.swatch-add{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;min-height:52px;padding:0 18px;border:1px dashed #b3aca1;font:400 15.5px/1.2 var(--sans);color:var(--ink);transition:border-color .2s}
+.swatch-add:hover{border-color:var(--ink)}
+.swatch-add:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
+.suggest{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;font-size:14.5px;color:var(--muted)}
+.suggest-list{display:flex;flex-wrap:wrap;gap:8px}
+.suggest-list button{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 12px 0 8px;border:1px solid var(--edge);font:500 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink);background:var(--field)}
+.suggest-list button:hover{border-color:var(--ink)}
+.suggest-list button:focus-visible{outline:1px solid var(--ink);outline-offset:2px}
+.suggest-list i{width:18px;height:18px;border:1px solid rgba(21,20,18,.14)}
+.suggest-list button::after{content:"+";font:400 16px/1 var(--sans);color:var(--muted)}
+
+/* Récapitulatif */
+.summary{position:sticky;top:24px;display:grid;gap:18px;padding-top:20px;border-top:1px solid var(--ink)}
+@media (max-width:1020px){.summary{position:static;margin-top:4px}}
+.sum-lines,.sum-meta{margin:0;display:grid}
+.sum-lines div,.sum-meta div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-block:10px;border-bottom:1px solid var(--line)}
+.sum-lines dt,.sum-meta dt{font-size:15.5px;color:var(--soft)}
+.sum-lines dd,.sum-meta dd{margin:0;font-size:16px;font-weight:500;font-variant-numeric:tabular-nums;text-align:right}
+.sum-lines .is-zero dd{color:#a39d93;font-weight:400}
+.sum-total{margin:4px 0 0;font:400 52px/1 var(--display);letter-spacing:-.02em;font-variant-numeric:lining-nums}
+.sum-total em{font-style:italic;font-size:.5em;color:var(--italic);letter-spacing:0}
+.sum-meta div:first-child{border-top:1px solid var(--line)}
+.send{all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:center;align-items:center;gap:12px;width:100%;min-height:58px;padding:16px 20px;background:var(--ink);color:var(--paper);font:500 13px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;text-align:center;transition:background .25s}
+.send:hover{background:#2e2b27}
+.send:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
+.send[aria-disabled="true"]{cursor:progress;background:#3b3833}
+.send .spin{display:none;width:16px;height:16px;border:1.5px solid rgba(248,247,244,.35);border-top-color:var(--paper);border-radius:50%;animation:spin .9s linear infinite}
+.send[aria-disabled="true"] .spin{display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.progress{display:grid;gap:8px}
+.progress-bar{height:2px;background:var(--line);overflow:hidden}
+.progress-bar i{display:block;height:100%;width:0;background:var(--ink);transition:width .5s ease}
+.progress-text{margin:0;font-size:14.5px;color:var(--soft)}
+.form-error{margin:0;padding:12px 14px;border-left:2px solid var(--error);background:#f5e9e4;color:#6b2214;font-size:15px;line-height:1.5}
+.form-error a{color:inherit}
+.sum-note{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}
+
+/* Confirmation */
+.done{display:grid;gap:30px;max-width:760px;padding-top:clamp(44px,7vw,96px)}
+.done:focus{outline:none}
+.done .pairs{max-width:620px}
+.done-warn{padding:14px 16px;border-left:2px solid var(--error);background:#f5e9e4;color:#6b2214;font-size:15.5px;line-height:1.55}
+.done-warn p{margin:0}
+.done-warn a{color:inherit}
+.done-links{margin:0;display:flex;flex-wrap:wrap;gap:12px 28px}
+.done-links a{color:var(--ink);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;font:500 12px/1.5 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+
+.colophon{margin-top:clamp(56px,8vw,104px);padding-top:22px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px 32px}
+.colophon p:last-child{margin:0;max-width:66ch;font-size:14px;color:var(--muted)}
+.colophon a{color:var(--ink);text-underline-offset:.18em;text-decoration-thickness:1px;white-space:nowrap}
+.hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+a:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation-duration:2s!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap" lang="fr">
+  <div class="topline">
+    <span class="eyebrow">Commande</span>
+    <a class="eyebrow" href="../">Voir le showreel</a>
+  </div>
+
+  <div id="page-form">
+    <header class="hero">
+      <div class="hero-title">
+        <p class="eyebrow rule">Vidéos courtes pour opticiens</p>
+        <h1><span>Vos vidéos,</span> <em>à votre image.</em></h1>
+      </div>
+      <div class="hero-side">
+        <p class="lede">Indiquez le nombre de vidéos et le style souhaité, décrivez votre projet, puis déposez votre logo et les éléments de votre identité visuelle. Je vous réponds avec un devis&nbsp;: rien n’est à payer avant votre accord.</p>
+        <dl class="pairs">
+          <div><dt>1. Votre demande</dt><dd>Ce formulaire, en quelques minutes</dd></div>
+          <div><dt>2. Le devis</dt><dd>Prix et délai confirmés par e-mail</dd></div>
+          <div><dt>3. Vos vidéos</dt><dd>En MP4 vertical, prêtes à publier</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="layout">
+      <form id="order" novalidate>
+        <fieldset class="form-body" id="form-body">
+
+          <section class="step" aria-labelledby="h-boutique">
+            <div class="step-head">
+              <span class="step-num" aria-hidden="true">01</span>
+              <div class="step-title">
+                <p class="eyebrow rule">Vos coordonnées</p>
+                <h2 id="h-boutique">Votre <em>boutique</em></h2>
+                <p class="step-intro">Pour vous envoyer le devis. Les champs marqués d’un astérisque sont obligatoires.</p>
+              </div>
+            </div>
+            <div class="fields">
+              <div class="field">
+                <label class="label" for="f-boutique">Nom de la boutique<span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="f-boutique" name="boutique" type="text" autocomplete="organization" required aria-describedby="e-boutique">
+                <p class="err" id="e-boutique" hidden></p>
+              </div>
+              <div class="field">
+                <label class="label" for="f-ville">Ville<span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="f-ville" name="ville" type="text" autocomplete="address-level2" required aria-describedby="e-ville">
+                <p class="err" id="e-ville" hidden></p>
+              </div>
+              <div class="field">
+                <label class="label" for="f-nom">Votre nom<span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="f-nom" name="nom" type="text" autocomplete="name" required aria-describedby="e-nom">
+                <p class="err" id="e-nom" hidden></p>
+              </div>
+              <div class="field">
+                <label class="label" for="f-email">E-mail<span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="f-email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" required aria-describedby="e-email" placeholder="nom@exemple.fr">
+                <p class="err" id="e-email" hidden></p>
+              </div>
+              <div class="field">
+                <label class="label" for="f-tel">Téléphone</label>
+                <input class="input" id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="06 12 34 56 78">
+              </div>
+              <div class="field">
+                <label class="label" for="f-instagram">Instagram</label>
+                <input class="input" id="f-instagram" name="instagram" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="@votreboutique">
+              </div>
+            </div>
+          </section>
+
+          <section class="step" aria-labelledby="h-videos">
+            <div class="step-head">
+              <span class="step-num" aria-hidden="true">02</span>
+              <div class="step-title">
+                <p class="eyebrow rule">Nombre et style</p>
+                <h2 id="h-videos">Vos <em>vidéos</em></h2>
+                <p class="step-intro">Indiquez combien de vidéos vous voulez dans chaque style&nbsp;; vous pouvez les combiner. <a href="../" target="_blank" rel="noopener">Revoir les exemples ↗</a></p>
+              </div>
+            </div>
+            <div class="styles" role="group" aria-labelledby="h-videos" aria-describedby="e-videos">
+              <article class="style-card" data-style="studio">
+                <div class="style-media"><img src="../films/21.jpg" alt="" loading="lazy" style="object-position:50% 42%"><span class="style-count" aria-hidden="true"></span></div>
+                <div class="style-body">
+                  <div class="style-text">
+                    <h3>Studio <em>produit</em></h3>
+                    <p>La monture seule, en plans rapprochés sur ses détails&nbsp;: branches, charnières, teinte des verres.</p>
+                  </div>
+                  <div class="stepper">
+                    <button type="button" data-step="-1" aria-label="Une vidéo studio produit de moins"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+                    <input id="f-videos" type="number" inputmode="numeric" min="0" max="99" step="1" value="0" aria-label="Nombre de vidéos studio produit">
+                    <button type="button" data-step="1" aria-label="Une vidéo studio produit de plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+                  </div>
+                </div>
+              </article>
+              <article class="style-card" data-style="mannequin">
+                <div class="style-media"><img src="../films/16.jpg" alt="" loading="lazy" style="object-position:50% 40%"><span class="style-count" aria-hidden="true"></span></div>
+                <div class="style-body">
+                  <div class="style-text">
+                    <h3>Avec <em>mannequin</em></h3>
+                    <p>La monture portée par un mannequin, dans un décor qui reprend sa matière et sa couleur.</p>
+                  </div>
+                  <div class="stepper">
+                    <button type="button" data-step="-1" aria-label="Une vidéo avec mannequin de moins"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+                    <input type="number" inputmode="numeric" min="0" max="99" step="1" value="0" aria-label="Nombre de vidéos avec mannequin">
+                    <button type="button" data-step="1" aria-label="Une vidéo avec mannequin de plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+                  </div>
+                </div>
+              </article>
+              <article class="style-card" data-style="surmesure">
+                <div class="style-media"><img src="../films/17.jpg" alt="" loading="lazy" style="object-position:30% 30%"><span class="style-count" aria-hidden="true"></span></div>
+                <div class="style-body">
+                  <div class="style-text">
+                    <h3>Sur <em>mesure</em></h3>
+                    <p>Une autre ambiance, un décor à vos couleurs, une vidéo de saison ou le lancement d’une collection.</p>
+                  </div>
+                  <div class="stepper">
+                    <button type="button" data-step="-1" aria-label="Une vidéo sur mesure de moins"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+                    <input type="number" inputmode="numeric" min="0" max="99" step="1" value="0" aria-label="Nombre de vidéos sur mesure">
+                    <button type="button" data-step="1" aria-label="Une vidéo sur mesure de plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <p class="err" id="e-videos" hidden></p>
+            <div class="tally" aria-live="polite">
+              <p class="tally-count"><span id="tally-n">0</span> <em id="tally-unit">vidéo</em></p>
+              <p class="tally-budget" id="tally-budget"></p>
+            </div>
+            <p class="hint">15 à 20&nbsp;€ par vidéo selon le style et le nombre de montures, tarif pack pour les grandes quantités. Le prix exact figure dans le devis.</p>
+            <fieldset class="group" id="f-mannequins-wrap" hidden>
+              <legend class="label">Mannequins</legend>
+              <div class="chips">
+                <label class="chip"><input class="sr" type="radio" name="mannequins" value="Femmes"><span>Femmes</span></label>
+                <label class="chip"><input class="sr" type="radio" name="mannequins" value="Hommes"><span>Hommes</span></label>
+                <label class="chip"><input class="sr" type="radio" name="mannequins" value="Femmes et hommes"><span>Femmes et hommes</span></label>
+                <label class="chip"><input class="sr" type="radio" name="mannequins" value="Au choix"><span>Je vous laisse choisir</span></label>
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="step" aria-labelledby="h-montures">
+            <div class="step-head">
+              <span class="step-num" aria-hidden="true">03</span>
+              <div class="step-title">
+                <p class="eyebrow rule">Les références</p>
+                <h2 id="h-montures">Vos <em>montures</em></h2>
+                <p class="step-intro">Je pars des références exactes de vos paires. Si vous ne les avez pas sous la main, vous pourrez me les envoyer plus tard.</p>
+              </div>
+            </div>
+            <div class="fields">
+              <div class="field wide">
+                <label class="label" for="f-montures">Références des montures</label>
+                <p class="hint" id="h-montures-hint">Une par ligne&nbsp;: marque, modèle, coloris.</p>
+                <textarea class="input" id="f-montures" name="montures" rows="5" aria-describedby="h-montures-hint" placeholder="Ray-Ban · RB2140 Wayfarer · Noir 901&#10;Persol · PO0649 · Havane 24/31"></textarea>
+              </div>
+              <div class="field wide">
+                <span class="label" id="l-montures">Photos des montures</span>
+                <p class="hint">Facultatif&nbsp;: visuels catalogue ou photos prises en boutique.</p>
+                <div class="drop" data-kind="montures">
+                  <input type="file" multiple accept="image/*,.pdf,.heic" hidden>
+                  <button type="button" class="drop-zone" aria-labelledby="l-montures dz-montures">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M12 15.5V4M7.5 8.5 12 4l4.5 4.5M4 14.5V19a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.5"/></svg>
+                    <span class="drop-title" id="dz-montures">Choisir des photos</span>
+                    <span class="drop-sub">ou glissez-les ici · 20&nbsp;Mo max par fichier</span>
+                  </button>
+                  <p class="err drop-note" aria-live="polite" hidden></p>
+                  <ul class="files" aria-label="Photos des montures ajoutées"></ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="step" aria-labelledby="h-identite">
+            <div class="step-head">
+              <span class="step-num" aria-hidden="true">04</span>
+              <div class="step-title">
+                <p class="eyebrow rule">Logo et direction artistique</p>
+                <h2 id="h-identite">Votre <em>identité visuelle</em></h2>
+                <p class="step-intro">Tout ce qui fait le style de votre boutique&nbsp;: je m’en sers pour que chaque vidéo vous ressemble.</p>
+              </div>
+            </div>
+            <div class="fields">
+              <div class="field wide">
+                <span class="label" id="l-logo">Votre logo</span>
+                <p class="hint">Toutes les versions que vous avez (couleur, blanc, noir), idéalement en PNG transparent, SVG ou PDF.</p>
+                <div class="drop" data-kind="logo">
+                  <input type="file" multiple accept="image/*,.svg,.pdf,.ai,.eps,.psd" hidden>
+                  <button type="button" class="drop-zone" aria-labelledby="l-logo dz-logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M12 15.5V4M7.5 8.5 12 4l4.5 4.5M4 14.5V19a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.5"/></svg>
+                    <span class="drop-title" id="dz-logo">Choisir des fichiers</span>
+                    <span class="drop-sub">ou glissez-les ici · 20&nbsp;Mo max par fichier</span>
+                  </button>
+                  <p class="err drop-note" aria-live="polite" hidden></p>
+                  <ul class="files" aria-label="Logos ajoutés"></ul>
+                </div>
+              </div>
+              <div class="field wide">
+                <span class="label" id="l-couleurs">Couleurs de la marque</span>
+                <p class="hint">Jusqu’à 5 couleurs, si vous les connaissez.</p>
+                <div class="swatches" id="swatches" role="group" aria-labelledby="l-couleurs">
+                  <button type="button" class="swatch-add" id="color-add">+ Ajouter une couleur</button>
+                </div>
+                <div class="suggest" id="suggest" hidden>
+                  <span>Couleurs repérées dans votre logo&nbsp;:</span>
+                  <span class="suggest-list" id="suggest-list"></span>
+                </div>
+              </div>
+              <div class="field wide">
+                <label class="label" for="f-typos">Typographies</label>
+                <p class="hint" id="h-typos">Le nom de vos polices, si vous le connaissez.</p>
+                <input class="input" id="f-typos" name="typos" type="text" aria-describedby="h-typos" placeholder="Didot, Futura…">
+              </div>
+              <div class="field wide">
+                <span class="label" id="l-da">Autres éléments de votre univers</span>
+                <p class="hint">Charte graphique, polices, photos de la boutique, visuels Instagram, moodboard, vidéos que vous aimez…</p>
+                <div class="drop" data-kind="da">
+                  <input type="file" multiple hidden>
+                  <button type="button" class="drop-zone" aria-labelledby="l-da dz-da">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M12 15.5V4M7.5 8.5 12 4l4.5 4.5M4 14.5V19a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.5"/></svg>
+                    <span class="drop-title" id="dz-da">Choisir des fichiers</span>
+                    <span class="drop-sub">ou glissez-les ici · 20&nbsp;Mo max par fichier</span>
+                  </button>
+                  <p class="err drop-note" aria-live="polite" hidden></p>
+                  <ul class="files" aria-label="Éléments de l’univers ajoutés"></ul>
+                </div>
+              </div>
+              <div class="field wide">
+                <label class="label" for="f-lien">Lien vers d’autres fichiers</label>
+                <p class="hint" id="h-lien">Fichiers de plus de 20&nbsp;Mo&nbsp;: collez un lien WeTransfer, Google Drive ou Dropbox.</p>
+                <input class="input" id="f-lien" name="lien" type="url" inputmode="url" autocapitalize="off" spellcheck="false" aria-describedby="h-lien" placeholder="https://">
+              </div>
+            </div>
+          </section>
+
+          <section class="step" aria-labelledby="h-envies">
+            <div class="step-head">
+              <span class="step-num" aria-hidden="true">05</span>
+              <div class="step-title">
+                <p class="eyebrow rule">Ambiance et précisions</p>
+                <h2 id="h-envies">Vos <em>envies</em></h2>
+                <p class="step-intro">Plus vous m’en dites, plus les vidéos seront proches de ce que vous imaginez.</p>
+              </div>
+            </div>
+            <div class="fields">
+              <fieldset class="group wide">
+                <legend class="label">Ambiance</legend>
+                <p class="hint">Plusieurs choix possibles.</p>
+                <div class="chips">
+                  <label class="chip"><input class="sr" type="checkbox" name="ambiance" value="Luxe et élégance"><span>Luxe &amp; élégance</span></label>
+                  <label class="chip"><input class="sr" type="checkbox" name="ambiance" value="Minimaliste"><span>Minimaliste</span></label>
+                  <label class="chip"><input class="sr" type="checkbox" name="ambiance" value="Naturelle et lumineuse"><span>Naturelle &amp; lumineuse</span></label>
+                  <label class="chip"><input class="sr" type="checkbox" name="ambiance" value="Colorée et pop"><span>Colorée &amp; pop</span></label>
+                  <label class="chip"><input class="sr" type="checkbox" name="ambiance" value="Urbaine"><span>Urbaine</span></label>
+                  <label class="chip"><input class="sr" type="checkbox" name="ambiance" value="Vintage"><span>Vintage</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="group wide">
+                <legend class="label">Musique</legend>
+                <div class="chips">
+                  <label class="chip"><input class="sr" type="radio" name="musique" value="Douce et lounge"><span>Douce &amp; lounge</span></label>
+                  <label class="chip"><input class="sr" type="radio" name="musique" value="Chic et jazzy"><span>Chic &amp; jazzy</span></label>
+                  <label class="chip"><input class="sr" type="radio" name="musique" value="Électro et rythmée"><span>Électro &amp; rythmée</span></label>
+                  <label class="chip"><input class="sr" type="radio" name="musique" value="Pop et joyeuse"><span>Pop &amp; joyeuse</span></label>
+                  <label class="chip"><input class="sr" type="radio" name="musique" value="Au choix"><span>Je vous laisse choisir</span></label>
+                </div>
+              </fieldset>
+              <div class="field wide">
+                <label class="label" for="f-texte">Texte à faire apparaître</label>
+                <p class="hint" id="h-texte">Par exemple «&nbsp;Nouvelle collection&nbsp;», «&nbsp;−20&nbsp;% jusqu’au 31 octobre&nbsp;» ou votre adresse.</p>
+                <input class="input" id="f-texte" name="texte" type="text" aria-describedby="h-texte">
+              </div>
+              <div class="field wide">
+                <label class="label" for="f-precisions">Décrivez votre projet</label>
+                <p class="hint" id="h-precisions">Ce que vous voulez mettre en avant, l’occasion (lancement, saison, soldes…), des vidéos qui vous inspirent, ce qu’il faut éviter.</p>
+                <textarea class="input" id="f-precisions" name="precisions" rows="6" aria-describedby="h-precisions"></textarea>
+              </div>
+              <div class="field">
+                <label class="label" for="f-date">Pour quand&nbsp;?</label>
+                <input class="input" id="f-date" name="date" type="date" aria-describedby="h-date">
+                <p class="hint" id="h-date">La date à laquelle vous aimeriez recevoir vos vidéos.</p>
+              </div>
+              <fieldset class="group wide">
+                <legend class="label">Je souhaite aussi un devis pour</legend>
+                <div class="checks">
+                  <label class="check"><input type="checkbox" name="options" value="Publication sur Instagram et Facebook"><span>La publication de mes vidéos sur Instagram et Facebook</span></label>
+                  <label class="check"><input type="checkbox" name="options" value="Campagnes Meta Ads"><span>Des campagnes publicitaires Meta Ads</span></label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="hp" aria-hidden="true"><label>Laissez ce champ vide <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></div>
+          </section>
+
+        </fieldset>
+      </form>
+
+      <aside class="summary" aria-labelledby="sum-title">
+        <p class="eyebrow rule" id="sum-title">Votre commande</p>
+        <dl class="sum-lines">
+          <div><dt>Studio produit</dt><dd data-sum="studio">0</dd></div>
+          <div><dt>Avec mannequin</dt><dd data-sum="mannequin">0</dd></div>
+          <div><dt>Sur mesure</dt><dd data-sum="surmesure">0</dd></div>
+        </dl>
+        <p class="sum-total"><span id="sum-n">0</span> <em id="sum-unit">vidéo</em></p>
+        <dl class="sum-meta">
+          <div><dt>Budget indicatif</dt><dd id="sum-budget">—</dd></div>
+          <div><dt>Fichiers joints</dt><dd id="sum-files">Aucun</dd></div>
+        </dl>
+        <button type="submit" form="order" class="send" id="send"><span class="spin" aria-hidden="true"></span><span class="send-label">Envoyer ma commande</span></button>
+        <div class="progress" id="progress" hidden>
+          <div class="progress-bar"><i id="progress-bar"></i></div>
+          <p class="progress-text" id="progress-text" aria-live="polite"></p>
+        </div>
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+        <p class="sum-note">Rien à payer maintenant&nbsp;: je vous envoie le devis et le délai par e-mail, et je ne commence qu’après votre accord.</p>
+      </aside>
+    </div>
+  </div>
+
+  <section class="done" id="done" hidden tabindex="-1" aria-labelledby="done-title">
+    <div class="hero-title">
+      <p class="eyebrow rule" id="done-ref">Commande envoyée</p>
+      <h1 id="done-title"><span>Merci,</span> <em>c’est bien reçu.</em></h1>
+    </div>
+    <p class="lede">Je reviens vers vous à <b id="done-email"></b> avec le devis et le délai. Rien n’est lancé avant votre accord.</p>
+    <dl class="pairs" id="done-recap"></dl>
+    <div class="done-warn" id="done-failed" hidden>
+      <p>Ces fichiers n’ont pas pu être envoyés&nbsp;: <span id="done-failed-list"></span>. Vous pouvez me les transmettre par e-mail à <a id="done-mail" href="mailto:sacharoth04@gmail.com">sacharoth04@gmail.com</a>.</p>
+    </div>
+    <p class="done-links"><a href="../">Revoir le showreel</a><a href="tel:+33699425143">Appeler le 06&nbsp;99&nbsp;42&nbsp;51&nbsp;43</a></p>
+  </section>
+
+  <footer class="colophon">
+    <p class="eyebrow">Commande 2026</p>
+    <p>Mannequins et décors créés par IA à partir des visuels de vos montures. Vos informations et vos fichiers servent uniquement à établir votre devis et à créer vos vidéos. Une question&nbsp;? <a href="tel:+33699425143">06&nbsp;99&nbsp;42&nbsp;51&nbsp;43</a> · <a href="mailto:sacharoth04@gmail.com">sacharoth04@gmail.com</a></p>
+  </footer>
+</div>
+
+<script>
+(() => {
+  "use strict";
+
+  // Adresse de l'application Web Google Apps Script qui reçoit les commandes (se termine par /exec)
+  const ENDPOINT = "https://script.google.com/macros/s/AKfycby1tlOcoOvoF7VtUA5xqL2xs0mPVXf-70EIBCm78SaZLoyuFNGYW5hYCyOuea5jjCc1/exec";
+  const CONTACT = "sacharoth04@gmail.com";
+  const MAX_FILE = 20 * 1024 * 1024;
+  const MAX_FILES = 30;
+  const MAX_COLORS = 5;
+  const PRICE = [15, 20];
+  const DRAFT_KEY = "commande-video:brouillon";
+  const STYLES = { studio: "Studio produit", mannequin: "Avec mannequin", surmesure: "Sur mesure" };
+  const X_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+
+  const $ = (s, r) => (r || document).querySelector(s);
+  const $$ = (s, r) => Array.prototype.slice.call((r || document).querySelectorAll(s));
+  const form = $("#order");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const params = new URLSearchParams(location.search);
+  // ?endpoint=… n'est accepté qu'en local, pour tester avec un faux serveur
+  const endpoint = (/^(localhost|127\.0\.0\.1)$/.test(location.hostname) && params.get("endpoint")) || ENDPOINT;
+
+  const euro = n => n.toLocaleString("fr-FR") + " €";
+  const plural = (n, one, many) => n + " " + (n > 1 ? many : one);
+  const fmtSize = b => b < 1048576 ? Math.max(1, Math.round(b / 1024)) + " Ko" : (b / 1048576).toLocaleString("fr-FR", { maximumFractionDigits: 1 }) + " Mo";
+  const make = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const fill = (parent, nodes) => { parent.textContent = ""; nodes.forEach(n => parent.appendChild(n)); };
+
+  /* ---------- Nombre de vidéos par style ---------- */
+  const counts = { studio: 0, mannequin: 0, surmesure: 0 };
+  const total = () => counts.studio + counts.mannequin + counts.surmesure;
+
+  function setCount(key, value, rewrite) {
+    const n = Math.max(0, Math.min(99, Math.floor(Number(value) || 0)));
+    counts[key] = n;
+    const card = $('.style-card[data-style="' + key + '"]');
+    if (rewrite !== false) $(".stepper input", card).value = n;
+    card.classList.toggle("is-on", n > 0);
+    $(".style-count", card).textContent = plural(n, "vidéo", "vidéos");
+    $('[data-step="-1"]', card).setAttribute("aria-disabled", String(n === 0));
+    $('[data-step="1"]', card).setAttribute("aria-disabled", String(n >= 99));
+    refresh();
+  }
+
+  $$(".style-card").forEach(card => {
+    const key = card.dataset.style;
+    const input = $(".stepper input", card);
+    $$("[data-step]", card).forEach(b => b.addEventListener("click", () => {
+      setCount(key, counts[key] + Number(b.dataset.step));
+      saveDraft();
+    }));
+    input.addEventListener("input", () => setCount(key, input.value, false));
+    input.addEventListener("change", () => setCount(key, input.value));
+    input.addEventListener("focus", () => input.select());
+  });
+
+  function refresh() {
+    const n = total();
+    $$("[data-sum]").forEach(e => {
+      e.textContent = counts[e.dataset.sum];
+      e.parentNode.classList.toggle("is-zero", !counts[e.dataset.sum]);
+    });
+    const unit = n > 1 ? "vidéos" : "vidéo";
+    const budget = n ? euro(n * PRICE[0]) + " à " + euro(n * PRICE[1]) : "";
+    $("#sum-n").textContent = $("#tally-n").textContent = n;
+    $("#sum-unit").textContent = $("#tally-unit").textContent = unit;
+    $("#sum-budget").textContent = budget || "—";
+    $("#tally-budget").textContent = n ? "Budget indicatif : " + budget : "";
+    $("#f-mannequins-wrap").hidden = !counts.mannequin;
+    const list = allFiles();
+    const size = list.reduce((s, f) => s + f.file.size, 0);
+    $("#sum-files").textContent = list.length ? plural(list.length, "fichier", "fichiers") + " · " + fmtSize(size) : "Aucun";
+    if (n) clearError("videos");
+  }
+
+  /* ---------- Fichiers ---------- */
+  const files = { logo: [], da: [], montures: [] };
+  const allFiles = () => files.logo.concat(files.da, files.montures);
+  const extOf = name => { const m = /\.([a-z0-9]{1,5})$/i.exec(name); return m ? m[1].toUpperCase() : "Fichier"; };
+  const isImage = f => /^image\/(png|jpe?g|gif|webp|avif|bmp|svg\+xml)$/i.test(f.type);
+  const hasFiles = e => !!e.dataTransfer && Array.prototype.indexOf.call(e.dataTransfer.types || [], "Files") > -1;
+  let uid = 0;
+
+  $$(".drop").forEach(drop => {
+    const kind = drop.dataset.kind;
+    const input = $("input[type=file]", drop);
+    $(".drop-zone", drop).addEventListener("click", () => { if (!busy) input.click(); });
+    input.addEventListener("change", () => { addFiles(kind, input.files); input.value = ""; });
+    ["dragenter", "dragover"].forEach(t => drop.addEventListener(t, e => {
+      if (!hasFiles(e) || busy) return;
+      e.preventDefault();
+      drop.classList.add("is-over");
+    }));
+    drop.addEventListener("dragleave", e => { if (!drop.contains(e.relatedTarget)) drop.classList.remove("is-over"); });
+    drop.addEventListener("drop", e => {
+      drop.classList.remove("is-over");
+      if (!hasFiles(e) || busy) return;
+      e.preventDefault();
+      addFiles(kind, e.dataTransfer.files);
+    });
+  });
+  // Un fichier lâché à côté d'une zone ne doit pas remplacer la page
+  ["dragover", "drop"].forEach(t => window.addEventListener(t, e => { if (hasFiles(e)) e.preventDefault(); }));
+
+  function addFiles(kind, list) {
+    const drop = $('.drop[data-kind="' + kind + '"]');
+    const notes = [];
+    let full = false;
+    Array.prototype.forEach.call(list, file => {
+      if (!file.size) return notes.push("« " + file.name + " » est vide.");
+      if (file.size > MAX_FILE) return notes.push("« " + file.name + " » dépasse 20 Mo : envoyez-le plutôt avec un lien WeTransfer ou Google Drive, dans le champ « Lien vers d’autres fichiers ».");
+      if (allFiles().some(f => f.file.name === file.name && f.file.size === file.size && f.file.lastModified === file.lastModified)) return;
+      if (allFiles().length >= MAX_FILES) {
+        if (!full) notes.push(MAX_FILES + " fichiers maximum : pour les autres, utilisez un lien de partage.");
+        full = true;
+        return;
+      }
+      files[kind].push({ id: ++uid, kind: kind, file: file, url: isImage(file) ? URL.createObjectURL(file) : "", sent: false, state: "" });
+    });
+    const note = $(".drop-note", drop);
+    note.textContent = notes.join(" ");
+    note.hidden = !notes.length;
+    renderFiles(kind);
+    refresh();
+    if (kind === "logo") suggestColors();
+  }
+
+  const STATE_LABEL = { wait: " · en attente", sending: " · envoi en cours…", sent: " · envoyé ✓", failed: " · non envoyé" };
+  function renderFiles(kind) {
+    fill($('.drop[data-kind="' + kind + '"] .files'), files[kind].map(item => {
+      const li = make("li", "file");
+      if (item.state) li.dataset.state = item.state;
+      const thumb = make("span", "file-thumb");
+      if (item.url) { const img = new Image(); img.alt = ""; img.src = item.url; thumb.appendChild(img); }
+      else thumb.appendChild(make("span", "file-ext", extOf(item.file.name)));
+      const text = make("span", "file-text");
+      text.appendChild(make("span", "file-name", item.file.name));
+      text.appendChild(make("span", "file-meta", fmtSize(item.file.size) + (STATE_LABEL[item.state] || "")));
+      const rm = make("button", "file-remove");
+      rm.type = "button";
+      rm.innerHTML = X_SVG;
+      rm.setAttribute("aria-label", "Retirer " + item.file.name);
+      rm.addEventListener("click", () => removeFile(kind, item.id));
+      li.appendChild(thumb); li.appendChild(text); li.appendChild(rm);
+      return li;
+    }));
+  }
+
+  function removeFile(kind, id) {
+    const i = files[kind].findIndex(f => f.id === id);
+    if (i < 0 || busy) return;
+    const item = files[kind].splice(i, 1)[0];
+    if (item.url) URL.revokeObjectURL(item.url);
+    renderFiles(kind);
+    refresh();
+    if (kind === "logo") suggestColors();
+    $('.drop[data-kind="' + kind + '"] .drop-zone').focus();
+  }
+
+  /* ---------- Couleurs de la marque ---------- */
+  let colors = [];
+  const rgb = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+  const near = (a, b) => { const x = rgb(a), y = rgb(b); return Math.hypot(x[0] - y[0], x[1] - y[1], x[2] - y[2]) < 48; };
+  const toHex = (r, g, b) => "#" + [r, g, b].map(v => Math.round(v).toString(16).padStart(2, "0")).join("");
+
+  function renderColors() {
+    const add = $("#color-add");
+    fill($("#swatches"), colors.map((hex, i) => {
+      const box = make("div", "swatch");
+      const input = make("input");
+      input.type = "color";
+      input.value = hex;
+      input.setAttribute("aria-label", "Couleur " + (i + 1));
+      const code = make("code", "", hex.toUpperCase());
+      input.addEventListener("input", () => { colors[i] = input.value; code.textContent = input.value.toUpperCase(); saveDraft(); });
+      const rm = make("button");
+      rm.type = "button";
+      rm.innerHTML = X_SVG;
+      rm.setAttribute("aria-label", "Retirer la couleur " + (i + 1));
+      rm.addEventListener("click", () => {
+        colors.splice(i, 1);
+        renderColors();
+        suggestColors();
+        saveDraft();
+        add.focus();
+      });
+      box.appendChild(input); box.appendChild(code); box.appendChild(rm);
+      return box;
+    }).concat(add));
+    add.hidden = colors.length >= MAX_COLORS;
+  }
+
+  $("#color-add").addEventListener("click", () => {
+    if (colors.length >= MAX_COLORS) return;
+    colors.push("#000000");
+    renderColors();
+    suggestColors();
+    saveDraft();
+    const inputs = $$("#swatches input[type=color]");
+    const last = inputs[inputs.length - 1];
+    last.focus();
+    try { last.click(); } catch (e) {}
+  });
+
+  // Propose les couleurs dominantes du logo (images uniquement)
+  let suggestRun = 0;
+  function suggestColors() {
+    const run = ++suggestRun;
+    const box = $("#suggest");
+    const logo = files.logo.filter(f => f.url)[0];
+    if (!logo || colors.length >= MAX_COLORS) { box.hidden = true; return; }
+    paletteFrom(logo.url).then(found => {
+      if (run !== suggestRun) return;
+      const fresh = found.filter(h => !colors.some(c => near(c, h)));
+      fill($("#suggest-list"), fresh.map(hex => {
+        const b = make("button");
+        b.type = "button";
+        b.setAttribute("aria-label", "Ajouter la couleur " + hex.toUpperCase());
+        const dot = make("i");
+        dot.style.background = hex;
+        b.appendChild(dot);
+        b.appendChild(document.createTextNode(hex.toUpperCase()));
+        b.addEventListener("click", () => {
+          if (colors.length >= MAX_COLORS) return;
+          colors.push(hex);
+          renderColors();
+          suggestColors();
+          saveDraft();
+        });
+        return b;
+      }));
+      box.hidden = !fresh.length;
+    });
+  }
+
+  function paletteFrom(url) {
+    return new Promise(resolve => {
+      const img = new Image();
+      img.onload = () => {
+        try {
+          const S = 72, w = img.naturalWidth || S, h = img.naturalHeight || S, k = Math.min(S / w, S / h);
+          const canvas = make("canvas");
+          canvas.width = Math.max(1, Math.round(w * k));
+          canvas.height = Math.max(1, Math.round(h * k));
+          const ctx = canvas.getContext("2d");
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          const px = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+          const buckets = {};
+          let count = 0;
+          for (let i = 0; i < px.length; i += 4) {
+            const r = px[i], g = px[i + 1], b = px[i + 2];
+            if (px[i + 3] < 200 || (r > 236 && g > 236 && b > 236)) continue; // transparence et fond blanc
+            const key = (r >> 5) + "," + (g >> 5) + "," + (b >> 5);
+            const e = buckets[key] || (buckets[key] = { n: 0, r: 0, g: 0, b: 0 });
+            e.n++; e.r += r; e.g += g; e.b += b; count++;
+          }
+          const out = [];
+          Object.keys(buckets).map(key => buckets[key]).sort((a, b) => b.n - a.n).forEach(e => {
+            if (out.length >= 4 || e.n < count * 0.03) return;
+            const hex = toHex(e.r / e.n, e.g / e.n, e.b / e.n);
+            if (!out.some(o => near(o, hex))) out.push(hex);
+          });
+          resolve(out);
+        } catch (err) { resolve([]); }
+      };
+      img.onerror = () => resolve([]);
+      img.src = url;
+    });
+  }
+
+  /* ---------- Brouillon (champs texte et choix, pas les fichiers) ---------- */
+  let saveTimer = 0;
+  function saveDraft() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => {
+      try {
+        const d = { v: 1, at: Date.now(), counts: counts, colors: colors, fields: {}, checks: {} };
+        $$(".input[name]", form).forEach(e => { if (e.value) d.fields[e.name] = e.value; });
+        $$("input[type=checkbox]:checked, input[type=radio]:checked", form).forEach(e => {
+          (d.checks[e.name] = d.checks[e.name] || []).push(e.value);
+        });
+        localStorage.setItem(DRAFT_KEY, JSON.stringify(d));
+      } catch (e) {}
+    }, 400);
+  }
+  function loadDraft() {
+    let d = null;
+    try { d = JSON.parse(localStorage.getItem(DRAFT_KEY) || "null"); } catch (e) {}
+    if (!d || d.v !== 1 || Date.now() - d.at > 30 * 864e5) return;
+    Object.keys(d.fields || {}).forEach(name => {
+      const e = $('.input[name="' + name + '"]', form);
+      if (e) e.value = String(d.fields[name]);
+    });
+    Object.keys(d.checks || {}).forEach(name => (d.checks[name] || []).forEach(v => {
+      $$('input[name="' + name + '"]', form).forEach(e => { if (e.value === v) e.checked = true; });
+    }));
+    Object.keys(STYLES).forEach(k => setCount(k, (d.counts || {})[k] || 0));
+    colors = (d.colors || []).filter(c => /^#[0-9a-f]{6}$/i.test(c)).slice(0, MAX_COLORS);
+    renderColors();
+  }
+  function clearDraft() {
+    clearTimeout(saveTimer);
+    try { localStorage.removeItem(DRAFT_KEY); } catch (e) {}
+  }
+  form.addEventListener("input", saveDraft);
+  form.addEventListener("change", saveDraft);
+  // Entrée dans un champ ne doit pas envoyer la commande
+  form.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.tagName === "INPUT") e.preventDefault(); });
+
+  /* ---------- Validation ---------- */
+  function setError(key, msg) {
+    const p = $("#e-" + key);
+    p.textContent = msg;
+    p.hidden = false;
+    const input = $("#f-" + key);
+    if (input && key !== "videos") input.setAttribute("aria-invalid", "true");
+  }
+  function clearError(key) {
+    const p = $("#e-" + key);
+    if (p && !p.hidden) { p.hidden = true; p.textContent = ""; }
+    const input = $("#f-" + key);
+    if (input) input.removeAttribute("aria-invalid");
+  }
+  ["boutique", "ville", "nom", "email"].forEach(k => $("#f-" + k).addEventListener("input", () => clearError(k)));
+
+  function collect() {
+    const fd = new FormData(form);
+    const s = k => String(fd.get(k) || "").trim();
+    let lien = s("lien");
+    if (lien && !/^https?:\/\//i.test(lien)) lien = "https://" + lien;
+    return {
+      boutique: s("boutique"), ville: s("ville"), nom: s("nom"), email: s("email"), tel: s("tel"), instagram: s("instagram"),
+      videos: { studio: counts.studio, mannequin: counts.mannequin, surmesure: counts.surmesure },
+      mannequins: counts.mannequin ? s("mannequins") : "",
+      montures: s("montures"),
+      couleurs: colors.slice(), typos: s("typos"), lien: lien,
+      ambiance: fd.getAll("ambiance").map(String), musique: s("musique"),
+      texte: s("texte"), precisions: s("precisions"), date: s("date"),
+      options: fd.getAll("options").map(String),
+      hp: s("site_web")
+    };
+  }
+
+  function validate(d) {
+    const errs = [];
+    if (!d.boutique) errs.push(["boutique", "Indiquez le nom de votre boutique."]);
+    if (!d.ville) errs.push(["ville", "Indiquez la ville de la boutique."]);
+    if (!d.nom) errs.push(["nom", "Indiquez votre nom."]);
+    if (!d.email) errs.push(["email", "Indiquez votre e-mail pour recevoir le devis."]);
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)) errs.push(["email", "Cet e-mail semble incomplet."]);
+    if (!total()) errs.push(["videos", "Choisissez au moins une vidéo dans l’un des trois styles."]);
+    return errs;
+  }
+
+  /* ---------- Envoi ---------- */
+  let busy = false, session = null, finished = false;
+
+  function formError(html) {
+    const p = $("#form-error");
+    p.innerHTML = html || "";
+    p.hidden = !html;
+  }
+  function setBusy(on) {
+    busy = on;
+    $("#form-body").disabled = on;
+    const btn = $("#send");
+    btn.setAttribute("aria-disabled", String(on));
+    $(".send-label", btn).textContent = on ? "Envoi en cours…" : "Envoyer ma commande";
+    $("#progress").hidden = !on;
+  }
+  function progress(done, n, text) {
+    $("#progress-bar").style.width = (n ? Math.round(done / n * 100) : 100) + "%";
+    $("#progress-text").textContent = text || (n ? "Envoi des fichiers : " + done + " sur " + n : "Envoi de votre commande…");
+  }
+
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const codeError = code => { const e = new Error(code); e.code = code; return e; };
+
+  async function call(body, timeout) {
+    const ctl = typeof AbortController === "function" ? new AbortController() : null;
+    const timer = ctl ? setTimeout(() => ctl.abort(), timeout) : 0;
+    try {
+      // Corps en texte brut : pas de requête préalable CORS avec Google Apps Script
+      const res = await fetch(endpoint, { method: "POST", body: JSON.stringify(body), redirect: "follow", signal: ctl ? ctl.signal : undefined });
+      let data = null;
+      try { data = await res.json(); } catch (e) { throw codeError("bad_response"); }
+      if (!data || !data.ok) throw codeError((data && data.error) || "server_error");
+      return data;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+  async function callTwice(body, timeout) {
+    try { return await call(body, timeout); }
+    catch (err) {
+      if (err.code === "expired") throw err;
+      await wait(1500);
+      return call(body, timeout);
+    }
+  }
+  const toBase64 = file => new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => { const s = String(r.result); resolve(s.slice(s.indexOf(",") + 1)); };
+    r.onerror = () => reject(r.error);
+    r.readAsDataURL(file);
+  });
+  async function pool(items, size, fn) {
+    let next = 0, stop = null;
+    const worker = async () => {
+      while (next < items.length && !stop) {
+        const item = items[next++];
+        try { await fn(item); } catch (err) { stop = err; }
+      }
+    };
+    const workers = [];
+    for (let i = 0; i < Math.min(size, items.length); i++) workers.push(worker());
+    await Promise.all(workers);
+    if (stop) throw stop;
+  }
+
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    if (busy) return;
+    formError("");
+    const d = collect();
+    const errs = validate(d);
+    ["boutique", "ville", "nom", "email", "videos"].forEach(clearError);
+    if (errs.length) {
+      errs.forEach(x => setError(x[0], x[1]));
+      const target = $("#f-" + errs[0][0]);
+      target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+      target.focus({ preventScroll: true });
+      formError("Il manque " + (errs.length > 1 ? "quelques informations" : "une information") + ", indiquée" + (errs.length > 1 ? "s" : "") + " en rouge.");
+      return;
+    }
+    if (!endpoint) {
+      formError("L’envoi en ligne n’est pas encore activé. Écrivez-moi à <a href=\"mailto:" + CONTACT + "\">" + CONTACT + "</a>.");
+      return;
+    }
+
+    setBusy(true);
+    const queue = allFiles().filter(f => !f.sent);
+    queue.forEach(f => { f.state = "wait"; });
+    Object.keys(files).forEach(renderFiles);
+    let done = allFiles().length - queue.length;
+    const n = allFiles().length;
+    progress(done, n, n ? null : "Envoi de votre commande…");
+    try {
+      if (!session) session = await call({ action: "start", boutique: d.boutique, ville: d.ville, hp: d.hp }, 45000);
+      await pool(queue, 2, async item => {
+        item.state = "sending";
+        renderFiles(item.kind);
+        try {
+          const data = await toBase64(item.file);
+          await callTwice({ action: "file", id: session.id, kind: item.kind, name: item.file.name, type: item.file.type, data: data }, 180000);
+          item.sent = true;
+          item.state = "sent";
+        } catch (err) {
+          if (err.code === "expired") throw err;
+          item.state = "failed";
+        }
+        renderFiles(item.kind);
+        progress(++done, n);
+      });
+      progress(n, n, "Finalisation de votre commande…");
+      const res = await callTwice({
+        action: "finish", id: session.id, order: d,
+        files: allFiles().map(f => ({ kind: f.kind, name: f.file.name, size: f.file.size, ok: f.sent }))
+      }, 60000);
+      showDone(d, res.ref || session.ref);
+    } catch (err) {
+      if (err.code === "expired") {
+        session = null;
+        allFiles().forEach(f => { f.sent = false; });
+      }
+      allFiles().forEach(f => { if (f.state !== "sent") f.state = ""; });
+      Object.keys(files).forEach(renderFiles);
+      formError("L’envoi n’a pas abouti. Vérifiez votre connexion puis cliquez de nouveau sur «&nbsp;Envoyer ma commande&nbsp;». Si le problème continue, écrivez-moi à <a href=\"mailto:" + CONTACT + "\">" + CONTACT + "</a>.");
+    } finally {
+      if (!finished) setBusy(false);
+    }
+  });
+
+  function showDone(d, ref) {
+    finished = true;
+    clearDraft();
+    const sent = allFiles().filter(f => f.sent);
+    const failed = allFiles().filter(f => !f.sent);
+    const parts = Object.keys(STYLES).filter(k => d.videos[k]).map(k => d.videos[k] + " " + STYLES[k].toLowerCase());
+    const n = total();
+    $("#done-ref").textContent = ref ? "Commande envoyée · Réf. " + ref : "Commande envoyée";
+    $("#done-email").textContent = d.email;
+    fill($("#done-recap"), [
+      ["Boutique", d.boutique + ", " + d.ville],
+      ["Vidéos", parts.join(" · ")],
+      ["Budget indicatif", euro(n * PRICE[0]) + " à " + euro(n * PRICE[1])],
+      ["Fichiers", sent.length ? plural(sent.length, "fichier reçu", "fichiers reçus") : failed.length ? "Aucun fichier reçu" : "Aucun fichier joint"]
+    ].map(row => {
+      const div = make("div");
+      div.appendChild(make("dt", "", row[0]));
+      div.appendChild(make("dd", "", row[1]));
+      return div;
+    }));
+    $("#done-failed").hidden = !failed.length;
+    if (failed.length) {
+      $("#done-failed-list").textContent = failed.map(f => f.file.name).join(", ");
+      $("#done-mail").href = "mailto:" + CONTACT + "?subject=" + encodeURIComponent("Fichiers pour ma commande" + (ref ? " " + ref : "") + " (" + d.boutique + ")");
+    }
+    allFiles().forEach(f => { if (f.url) URL.revokeObjectURL(f.url); });
+    $("#page-form").hidden = true;
+    $("#done").hidden = false;
+    window.scrollTo(0, 0);
+    $("#done").focus({ preventScroll: true });
+  }
+
+  // Avertit avant de quitter la page pendant l'envoi ou avec des fichiers pas encore envoyés
+  window.addEventListener("beforeunload", e => {
+    if (finished || !(busy || allFiles().length)) return;
+    e.preventDefault();
+    e.returnValue = "";
+  });
+
+  /* ---------- Démarrage ---------- */
+  loadDraft();
+  ["boutique", "ville"].forEach(k => {
+    const v = params.get(k);
+    if (v && !form.elements[k].value) form.elements[k].value = v.slice(0, 80);
+  });
+  const now = new Date();
+  $("#f-date").min = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  Object.keys(STYLES).forEach(k => setCount(k, counts[k]));
+  renderColors();
+})();
+</script>
+</body>
+</html>
