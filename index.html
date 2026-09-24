@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Vidéos courtes pour opticiens : présentation studio de vos montures ou mise en scène avec mannequin, format vertical 9:16, musique originale. 15 à 20 € par vidéo.">
+<meta name="theme-color" content="#f8f7f4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f8f7f4'/%3E%3Ccircle cx='10' cy='17' r='5.5' fill='none' stroke='%23151412' stroke-width='1.8'/%3E%3Ccircle cx='22' cy='17' r='5.5' fill='none' stroke='%23151412' stroke-width='1.8'/%3E%3Cpath d='M15.5 16.2q.5-1.4 1 0' fill='none' stroke='%23151412' stroke-width='1.8'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://sacharth.github.io/showreel-opticiens/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://sacharth.github.io/showreel-opticiens/">
+<meta property="og:title" content="Vos montures, mises en scène · Showreel pour opticiens">
+<meta property="og:description" content="Vidéos courtes pour opticiens : présentation studio de vos montures ou mise en scène avec mannequin, format vertical 9:16, musique originale. 15 à 20 € par vidéo.">
+<meta property="og:image" content="https://sacharth.github.io/showreel-opticiens/og.jpg?v=2">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Showreel Opticiens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@400;500&display=swap">
+<style>
+/* Une seule ambiance claire, identique pour tous les clients (écran clair ou sombre) */
+:root{
+  color-scheme:light;
+  --paper:#f8f7f4;
+  --ink:#151412;
+  --soft:#45413b;
+  --muted:#5f5a53;
+  --italic:#6b665e;
+  --line:#e0ddd7;
+  --tile:#ebe9e4;
+  --gilt:#b59c6b;
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --sans:"Jost","Futura","Avenir Next",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,4.5vw,56px);padding-block:clamp(18px,3vw,28px) clamp(40px,6vw,72px)}
+
+.eyebrow{margin:0;font:500 12px/1.5 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.eyebrow.rule{display:flex;align-items:center;gap:14px}
+.eyebrow.rule::before{content:"";width:28px;height:1px;background:var(--gilt);flex:none}
+
+.topline{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 24px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.topline-end{display:flex;align-items:baseline;gap:24px}
+.to-contact{background:none;border:0;border-bottom:1px solid currentColor;padding:0 0 2px;cursor:pointer;color:var(--ink)}
+@media (max-width:560px){.series{display:none}}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:end;padding-top:clamp(48px,8vw,104px)}
+@media (max-width:900px){.hero{grid-template-columns:minmax(0,1fr)}}
+.hero-title{display:grid;gap:clamp(18px,2.4vw,28px)}
+h1{margin:0;font:400 clamp(44px,6.6vw,92px)/.98 var(--display);letter-spacing:-.018em}
+h1 span,h1 em{display:block}
+h1 em{font-style:italic;color:var(--italic)}
+.hero-side{display:grid;gap:28px}
+.lede{margin:0;max-width:44ch;color:var(--soft);font-size:clamp(17px,1.4vw,19px)}
+
+.pairs{margin:0;display:grid}
+.pairs div{display:grid;grid-template-columns:minmax(110px,34%) minmax(0,1fr);align-items:baseline;gap:16px;padding-block:13px;border-top:1px solid var(--line)}
+.pairs div:last-child{border-bottom:1px solid var(--line)}
+.pairs dt{font:500 12px/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pairs dd{margin:0;font-size:16px;color:var(--ink)}
+@media (max-width:420px){.pairs div{grid-template-columns:minmax(0,1fr);gap:2px}}
+
+.collection{padding-top:clamp(64px,9vw,120px)}
+.collection-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px 48px;margin-bottom:clamp(24px,3.2vw,44px)}
+.collection-title{display:grid;gap:14px}
+h2{margin:0;font:400 clamp(30px,3.6vw,46px)/1.05 var(--display);letter-spacing:-.01em}
+h2 em{font-style:italic;color:var(--italic)}
+.collection-note{margin:0;max-width:42ch;color:var(--soft);font-size:16.5px}
+
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(28px,3.5vw,48px) clamp(12px,1.8vw,26px)}
+@media (max-width:860px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.clip{all:unset;box-sizing:border-box;cursor:pointer;display:grid;align-content:start;gap:14px;min-width:0}
+.frame{position:relative;aspect-ratio:9/16;max-width:100%;overflow:hidden;background:var(--tile)}
+.frame img,.frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.4s cubic-bezier(.2,.65,.25,1)}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,8,.42),rgba(10,9,8,0) 38%);opacity:0;transition:opacity .6s ease}
+.hint{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;display:flex;align-items:center;gap:10px;font:500 11px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#fff;opacity:0;transform:translateY(6px);transition:opacity .6s ease,transform .6s ease}
+.hint svg{width:22px;height:22px;flex:none}
+.clip:hover .frame img,.clip:hover .frame video{transform:scale(1.035)}
+.clip:hover .frame::after,.clip:focus-visible .frame::after{opacity:1}
+.clip:hover .hint,.clip:focus-visible .hint{opacity:1;transform:none}
+@media (hover:none){.frame::after{opacity:1}.hint{opacity:1;transform:none}}
+@media (max-width:560px){.hint span{display:none}}
+.clip:focus-visible .frame{outline:1px solid var(--ink);outline-offset:4px}
+.cap{display:grid;gap:4px}
+.cap b{font:500 22px/1.2 var(--display);letter-spacing:-.005em}
+.cap span{font:500 11.5px/1.5 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);overflow-wrap:anywhere}
+
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,64px)}
+@media (max-width:760px){.services{grid-template-columns:minmax(0,1fr)}}
+.service{display:grid;align-content:start;gap:12px;padding-top:22px;border-top:1px solid var(--line)}
+.service h3{margin:0;font:400 clamp(26px,2.6vw,32px)/1.15 var(--display);letter-spacing:-.005em}
+.service h3 em{font-style:italic;color:var(--italic)}
+.service-text{margin:0;max-width:46ch;color:var(--soft);font-size:16.5px}
+.service .pairs{margin-top:10px}
+
+.offer{margin-top:clamp(72px,10vw,136px);padding-block:clamp(36px,5vw,64px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(32px,6vw,96px);align-items:start}
+@media (max-width:820px){.offer{grid-template-columns:minmax(0,1fr)}}
+.price{margin:20px 0 0;font:400 clamp(56px,7.4vw,96px)/.95 var(--display);letter-spacing:-.02em;font-variant-numeric:lining-nums}
+.price em{font-style:italic;font-size:.62em;color:var(--italic);margin-inline:.08em}
+.price-unit{margin:8px 0 0;font:italic 400 clamp(22px,2.2vw,28px)/1.2 var(--display);color:var(--italic)}
+.offer-text{margin:22px 0 0;max-width:42ch;color:var(--soft);font-size:16.5px}
+
+.colophon{margin-top:clamp(24px,3.5vw,40px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px 32px}
+.colophon p:last-child{margin:0;max-width:60ch;font-size:14px;color:var(--muted)}
+
+.contact-lines{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,64px)}
+@media (max-width:760px){.contact-lines{grid-template-columns:minmax(0,1fr)}}
+.contact-line{display:grid;justify-items:start;gap:14px;min-width:0;padding-top:22px;border-top:1px solid var(--line)}
+.contact-value{max-width:100%;font:400 clamp(24px,2.6vw,34px)/1.15 var(--display);color:var(--ink);text-decoration:none;overflow-wrap:anywhere;font-variant-numeric:lining-nums}
+.contact-value:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}
+.copy{font:500 11.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:none;border:1px solid var(--line);padding:11px 14px;min-width:9.5em;text-align:center;cursor:pointer;transition:border-color .3s}
+.copy:hover{border-color:var(--ink)}
+.to-contact:focus-visible,.contact-value:focus-visible,.copy:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
+
+/* Lecteur plein écran */
+.viewer{position:fixed;inset:0;z-index:50;background:rgba(14,13,12,.96);display:grid;place-items:center;padding:calc(84px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px))}
+.viewer video{height:100%;max-height:100%;max-width:100%;aspect-ratio:9/16;background:#000}
+.bar{position:absolute;top:env(safe-area-inset-top,0px);left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px clamp(16px,3vw,32px)}
+.v-meta{display:grid;gap:3px;min-width:0}
+.v-count,.v-ref{font:500 11px/1.5 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#a8a39a}
+.v-meta strong{font:400 22px/1.15 var(--display);color:#fff}
+.nav{display:flex;gap:8px;flex:none}
+.nav button{all:unset;box-sizing:border-box;cursor:pointer;width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.22);border-radius:50%;color:#fff;transition:background .3s,border-color .3s}
+.nav button:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.5)}
+.nav button:focus-visible{outline:1px solid #fff;outline-offset:3px}
+.nav svg{width:16px;height:16px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap" lang="fr">
+  <div class="topline">
+    <span class="eyebrow">Showreel</span>
+    <div class="topline-end">
+      <span class="eyebrow series">8 films de démonstration</span>
+      <button type="button" class="eyebrow to-contact" id="to-contact">Contact</button>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="hero-title">
+      <p class="eyebrow rule">Vidéos courtes pour opticiens</p>
+      <h1><span>Vos montures,</span> <em>mises en scène.</em></h1>
+    </div>
+    <div class="hero-side">
+      <p class="lede">Des films verticaux de 12&nbsp;secondes pour Instagram, TikTok et l’écran de votre vitrine. Je pars des références exactes de vos montures pour créer une présentation studio de la paire seule, une mise en scène avec mannequin, ou tout autre style que vous imaginez.</p>
+      <dl class="pairs">
+        <div><dt>Format</dt><dd>9:16 · 1080&nbsp;×&nbsp;1920</dd></div>
+        <div><dt>Durée</dt><dd>≈&nbsp;12 secondes</dd></div>
+        <div><dt>Son</dt><dd>Musique instrumentale originale</dd></div>
+        <div><dt>Signature</dt><dd>Votre logo intégré</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <section class="collection" aria-labelledby="h-studio">
+    <div class="collection-head">
+      <div class="collection-title">
+        <p class="eyebrow rule">La monture seule</p>
+        <h2 id="h-studio">Studio <em>produit</em></h2>
+      </div>
+      <p class="collection-note">Plans rapprochés sur les détails&nbsp;: branches, charnières, logos, teinte des verres.</p>
+    </div>
+    <div class="grid" data-group="studio"></div>
+  </section>
+
+  <section class="collection" aria-labelledby="h-mannequin">
+    <div class="collection-head">
+      <div class="collection-title">
+        <p class="eyebrow rule">Aussi possible</p>
+        <h2 id="h-mannequin">Avec <em>mannequin</em></h2>
+      </div>
+      <p class="collection-note">La monture portée par un mannequin, dans un décor qui reprend sa matière et sa couleur.</p>
+    </div>
+    <div class="grid" data-group="mannequin"></div>
+  </section>
+
+  <section class="collection" aria-labelledby="h-more">
+    <div class="collection-head">
+      <div class="collection-title">
+        <p class="eyebrow rule">Sur mesure</p>
+        <h2 id="h-more">Au-delà de ces <em>films</em></h2>
+      </div>
+      <p class="collection-note">Ce que vous voyez ici n’est qu’un aperçu de ce qui peut être créé et diffusé pour votre boutique.</p>
+    </div>
+    <div class="services">
+      <article class="service">
+        <p class="eyebrow">Création</p>
+        <h3>Tout style de <em>vidéo</em></h3>
+        <p class="service-text">Au-delà du studio produit et du mannequin, tout style de vidéo est envisageable&nbsp;: une autre ambiance, un décor à vos couleurs, une vidéo de saison, le lancement d’une collection… Décrivez votre idée, nous regardons ensemble ce qui est réalisable.</p>
+      </article>
+      <article class="service">
+        <p class="eyebrow">Diffusion</p>
+        <h3>Publication <em>&amp;</em> campagnes Meta Ads</h3>
+        <p class="service-text">Je peux aussi gérer la publication de vos vidéos sur Instagram et Facebook, ainsi que vos campagnes publicitaires Meta Ads pour les diffuser auprès des clients de votre secteur.</p>
+        <dl class="pairs"><div><dt>Tarif</dt><dd>Sur devis</dd></div></dl>
+      </article>
+    </div>
+  </section>
+
+  <section class="offer" aria-labelledby="h-offer">
+    <div>
+      <h2 class="eyebrow rule" id="h-offer">Tarif</h2>
+      <p class="price">15 <em>à</em> 20&nbsp;€</p>
+      <p class="price-unit">par vidéo</p>
+      <p class="offer-text">Selon le type de vidéo et le nombre de montures. Vous m’envoyez les références de vos paires, je vous livre des fichiers prêts à publier.</p>
+    </div>
+    <dl class="pairs">
+      <div><dt>Vous envoyez</dt><dd>Les références des montures (marque, modèle, coloris) et votre logo</dd></div>
+      <div><dt>Je livre</dt><dd>Des MP4 verticaux prêts pour les réseaux et l’écran en boutique</dd></div>
+      <div><dt>Styles</dt><dd>Studio produit, mannequin ou sur mesure</dd></div>
+      <div><dt>En option</dt><dd>Publication et campagnes Meta Ads, sur devis</dd></div>
+      <div><dt>Exemples</dt><dd>« Votre logo » est remplacé par le logo de votre boutique</dd></div>
+    </dl>
+  </section>
+
+  <section class="collection" id="contact" aria-labelledby="h-contact">
+    <div class="collection-head">
+      <div class="collection-title">
+        <p class="eyebrow rule">Contact</p>
+        <h2 id="h-contact">Parlons de <em>votre boutique</em></h2>
+      </div>
+      <p class="collection-note">Une question, une idée de vidéo ou un devis pour vos campagnes Meta Ads&nbsp;: appelez-moi ou écrivez-moi.</p>
+    </div>
+    <div class="contact-lines">
+      <div class="contact-line">
+        <span class="eyebrow">Téléphone</span>
+        <a class="contact-value" href="tel:+33699425143">06 99 42 51 43</a>
+        <button type="button" class="copy" data-copy="06 99 42 51 43" aria-live="polite">Copier</button>
+      </div>
+      <div class="contact-line">
+        <span class="eyebrow">E-mail</span>
+        <a class="contact-value" href="mailto:sacharoth04@gmail.com">sacharoth04@gmail.com</a>
+        <button type="button" class="copy" data-copy="sacharoth04@gmail.com" aria-live="polite">Copier</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <p class="eyebrow">Showreel 2026</p>
+    <p>Mannequins et décors créés par IA à partir des visuels catalogue des montures.</p>
+  </footer>
+</div>
+
+<div class="viewer" id="viewer" hidden role="dialog" aria-modal="true" aria-labelledby="v-title" lang="fr">
+  <div class="bar">
+    <div class="v-meta"><span class="v-count" id="v-count"></span><strong id="v-title"></strong><span class="v-ref" id="v-ref"></span></div>
+    <div class="nav">
+      <button type="button" id="v-prev" aria-label="Vidéo précédente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button type="button" id="v-next" aria-label="Vidéo suivante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9 5l7 7-7 7"/></svg></button>
+      <button type="button" id="v-close" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+  <video id="v-player" playsinline controls></video>
+</div>
+
+<script>
+const CLIPS = [
+  {id:"20", group:"studio", title:"Silver Details", ref:"Saint Laurent · SL 934 MIA 003"},
+  {id:"21", group:"studio", title:"Black Acetate", ref:"Bottega Veneta · BV1494S 001"},
+  {id:"22", group:"studio", title:"Oblique Details", ref:"Dior · Oblique S5I"},
+  {id:"23", group:"studio", title:"Rimless Gold", ref:"Chanel · 4286-T C395/S3"},
+  {id:"16", group:"mannequin", title:"Silver Passage", ref:"Saint Laurent · SL 934 MIA 003"},
+  {id:"17", group:"mannequin", title:"Black Sculpture", ref:"Bottega Veneta · BV1494S 001"},
+  {id:"18", group:"mannequin", title:"Blue Geometry", ref:"Dior · Oblique S5I"},
+  {id:"19", group:"mannequin", title:"Golden Frame", ref:"Chanel · 4286-T C395/S3"}
+];
+const playSvg = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11.4" stroke="currentColor" stroke-width=".9"/><path d="M10 8.2v7.6l6-3.8z" fill="currentColor"/></svg>';
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+CLIPS.forEach((c, i) => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "clip";
+  b.setAttribute("aria-label", `Regarder ${c.title}, ${c.ref}, avec le son`);
+  b.innerHTML = `<div class="frame"><img src="films/${c.id}.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" poster="films/${c.id}.jpg" data-src="films/${c.id}.mp4"></video><span class="hint">${playSvg}<span>Regarder avec le son</span></span></div><div class="cap"><b>${c.title}</b><span>${c.ref}</span></div>`;
+  b.addEventListener("click", () => openViewer(i));
+  document.querySelector(`[data-group="${c.group}"]`).appendChild(b);
+});
+
+// Aperçu muet en boucle quand la vignette est à l'écran
+if (!reduce && "IntersectionObserver" in window) {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const v = e.target;
+      if (e.isIntersecting) {
+        if (!v.src) v.src = v.dataset.src;
+        v.play().catch(() => {});
+      } else v.pause();
+    });
+  }, {threshold: .45});
+  document.querySelectorAll(".frame video").forEach(v => io.observe(v));
+}
+
+const viewer = document.getElementById("viewer"), player = document.getElementById("v-player");
+const pad = n => String(n).padStart(2, "0");
+let current = 0, lastFocus = null;
+function show(i){
+  current = (i + CLIPS.length) % CLIPS.length;
+  const c = CLIPS[current];
+  document.getElementById("v-count").textContent = `${pad(current + 1)} / ${pad(CLIPS.length)}`;
+  document.getElementById("v-title").textContent = c.title;
+  document.getElementById("v-ref").textContent = c.ref;
+  player.poster = `films/${c.id}.jpg`;
+  player.src = `films/${c.id}.mp4`;
+  player.muted = false;
+  player.play().catch(() => {});
+}
+function openViewer(i){
+  lastFocus = document.activeElement;
+  document.querySelectorAll(".frame video").forEach(v => v.pause());
+  viewer.hidden = false;
+  document.body.style.overflow = "hidden";
+  show(i);
+  document.getElementById("v-close").focus();
+}
+function closeViewer(){
+  player.pause(); player.removeAttribute("src"); player.load();
+  viewer.hidden = true;
+  document.body.style.overflow = "";
+  if (lastFocus) lastFocus.focus();
+}
+player.addEventListener("ended", () => show(current + 1));
+document.getElementById("v-close").onclick = closeViewer;
+document.getElementById("v-prev").onclick = () => show(current - 1);
+document.getElementById("v-next").onclick = () => show(current + 1);
+viewer.addEventListener("click", e => { if (e.target === viewer) closeViewer(); });
+document.addEventListener("keydown", e => {
+  if (viewer.hidden) return;
+  if (e.key === "Escape") closeViewer();
+  if (e.key === "ArrowRight") show(current + 1);
+  if (e.key === "ArrowLeft") show(current - 1);
+});
+
+document.getElementById("to-contact").onclick = () =>
+  document.getElementById("contact").scrollIntoView({behavior: reduce ? "auto" : "smooth", block: "start"});
+
+// Copie du numéro / de l'e-mail ; si le presse-papiers est refusé, on sélectionne le texte
+document.querySelectorAll(".copy").forEach(btn => {
+  let timer;
+  const say = msg => { btn.textContent = msg; clearTimeout(timer); timer = setTimeout(() => btn.textContent = "Copier", 2200); };
+  const selectValue = () => {
+    const r = document.createRange();
+    r.selectNodeContents(btn.parentElement.querySelector(".contact-value"));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    say("Sélectionné");
+  };
+  btn.addEventListener("click", () => {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(btn.dataset.copy).then(() => say("Copié"), selectValue);
+    } else selectValue();
+  });
+});
+</script>
+</body>
+</html>
