@@ -13,7 +13,7 @@
 <meta property="og:url" content="https://sacharth.github.io/showreel-opticiens/commande/">
 <meta property="og:title" content="Commander vos vidéos · Opticiens">
 <meta property="og:description" content="Concepts tendance, studio produit, mannequin : choisissez vos vidéos, déposez votre logo et recevez votre devis par e-mail.">
-<meta property="og:image" content="https://sacharth.github.io/showreel-opticiens/og.jpg?v=3">
+<meta property="og:image" content="https://sacharth.github.io/showreel-opticiens/og.jpg?v=4">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -126,7 +126,6 @@ input[type="date"].input{min-height:52px;line-height:1.2}
 .style-card.is-on{border-color:var(--accent);background:var(--accent-tint)}
 .style-media{position:relative;min-height:100%;border-radius:12px;overflow:hidden;background:#e9e5dd}
 .style-media img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}
-.style-new{position:absolute;top:8px;left:8px;padding:3px 8px;border-radius:999px;background:var(--accent);color:#fff;font:700 11.5px/1.3 var(--sans)}
 .style-count{position:absolute;left:20px;bottom:20px;padding:3px 9px;border-radius:999px;background:var(--accent);color:#fff;font:600 12.5px/1.4 var(--sans);opacity:0;transition:opacity .2s}
 .is-on .style-count{opacity:1}
 .style-body{display:grid;align-content:space-between;gap:12px;padding:4px 4px 2px 0;min-width:0}
@@ -340,21 +339,6 @@ input[type="date"].input{min-height:52px;line-height:1.2}
               <p class="step-intro">Indiquez combien de vidéos vous voulez dans chaque style&nbsp;; vous pouvez les combiner. <a href="../#concepts" target="_blank" rel="noopener">Revoir les exemples ↗</a></p>
             </div>
             <div class="styles" role="group" aria-labelledby="h-videos" aria-describedby="e-videos">
-              <article class="style-card" data-style="tendance">
-                <div class="style-media"><img src="../films/26.jpg" alt="" loading="lazy" style="object-position:50% 40%"><span class="style-new">Nouveau</span></div>
-                <div class="style-body">
-                  <div class="style-text">
-                    <h3>Concept tendance</h3>
-                    <p>Les formats viraux du moment&nbsp;: danse devant la boutique, lancer vers la caméra, effet foule…</p>
-                  </div>
-                  <div class="stepper">
-                    <button type="button" data-step="-1" aria-label="Un concept tendance de moins"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/></svg></button>
-                    <input type="number" inputmode="numeric" min="0" max="99" step="1" value="0" aria-label="Nombre de vidéos concept tendance">
-                    <button type="button" data-step="1" aria-label="Un concept tendance de plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
-                  </div>
-                </div>
-                <span class="style-count" aria-hidden="true"></span>
-              </article>
               <article class="style-card" data-style="studio">
                 <div class="style-media"><img src="../films/21.jpg" alt="" loading="lazy" style="object-position:50% 42%"></div>
                 <div class="style-body">
@@ -385,6 +369,21 @@ input[type="date"].input{min-height:52px;line-height:1.2}
                 </div>
                 <span class="style-count" aria-hidden="true"></span>
               </article>
+              <article class="style-card" data-style="tendance">
+                <div class="style-media"><img src="../films/26.jpg" alt="" loading="lazy" style="object-position:50% 40%"></div>
+                <div class="style-body">
+                  <div class="style-text">
+                    <h3>Concept tendance</h3>
+                    <p>Une tendance virale du moment, adaptée à votre boutique&nbsp;: danse, transition, effet foule… Des exemples sont dans le showreel.</p>
+                  </div>
+                  <div class="stepper">
+                    <button type="button" data-step="-1" aria-label="Un concept tendance de moins"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+                    <input type="number" inputmode="numeric" min="0" max="99" step="1" value="0" aria-label="Nombre de vidéos concept tendance">
+                    <button type="button" data-step="1" aria-label="Un concept tendance de plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+                  </div>
+                </div>
+                <span class="style-count" aria-hidden="true"></span>
+              </article>
               <article class="style-card" data-style="surmesure">
                 <div class="style-media"><img src="../films/17.jpg" alt="" loading="lazy" style="object-position:30% 30%"></div>
                 <div class="style-body">
@@ -407,16 +406,11 @@ input[type="date"].input{min-height:52px;line-height:1.2}
               <p class="tally-budget" id="tally-budget"></p>
             </div>
             <p class="hint">15 à 20&nbsp;€ par vidéo selon le style et le nombre de montures, tarif pack pour les grandes quantités. Le prix exact figure dans le devis.</p>
-            <fieldset class="group sub" id="f-concepts-wrap" hidden>
-              <legend class="label">Quels concepts tendance&nbsp;?</legend>
-              <p class="hint">Plusieurs choix possibles. <a class="accent" href="../#concepts" target="_blank" rel="noopener">Voir les concepts ↗</a></p>
-              <div class="chips">
-                <label class="chip"><input class="sr" type="checkbox" name="concepts" value="La foule à vos couleurs"><span>La foule à vos couleurs</span></label>
-                <label class="chip"><input class="sr" type="checkbox" name="concepts" value="Le lancer vers la caméra"><span>Le lancer vers la caméra</span></label>
-                <label class="chip"><input class="sr" type="checkbox" name="concepts" value="La danse devant la boutique"><span>La danse devant la boutique</span></label>
-                <label class="chip"><input class="sr" type="checkbox" name="concepts" value="Une autre tendance"><span>Une autre tendance (à préciser)</span></label>
-              </div>
-            </fieldset>
+            <div class="field sub" id="f-tendance-wrap" hidden>
+              <label class="label" for="f-tendance">La tendance qui vous inspire <span class="opt">(facultatif)</span></label>
+              <p class="hint" id="h-tendance">Collez le lien d’une vidéo Instagram ou TikTok, ou décrivez l’idée. Sinon, je vous propose les tendances du moment, adaptées à votre boutique. <a class="accent" href="../#concepts" target="_blank" rel="noopener">Voir des exemples ↗</a></p>
+              <textarea class="input" id="f-tendance" name="tendance_idee" rows="3" aria-describedby="h-tendance"></textarea>
+            </div>
             <fieldset class="group sub" id="f-mannequins-wrap" hidden>
               <legend class="label">Mannequins</legend>
               <div class="chips">
@@ -580,9 +574,9 @@ input[type="date"].input{min-height:52px;line-height:1.2}
       <aside class="summary" aria-labelledby="sum-title">
         <h2 id="sum-title">Votre commande</h2>
         <dl class="sum-lines">
-          <div><dt>Concept tendance</dt><dd data-sum="tendance">0</dd></div>
           <div><dt>Studio produit</dt><dd data-sum="studio">0</dd></div>
           <div><dt>Avec mannequin</dt><dd data-sum="mannequin">0</dd></div>
+          <div><dt>Concept tendance</dt><dd data-sum="tendance">0</dd></div>
           <div><dt>Sur mesure</dt><dd data-sum="surmesure">0</dd></div>
         </dl>
         <p class="sum-total"><span id="sum-n">0</span> <span id="sum-unit">vidéo</span></p>
@@ -632,10 +626,8 @@ input[type="date"].input{min-height:52px;line-height:1.2}
   const MAX_COLORS = 5;
   const PRICE = [15, 20];
   const DRAFT_KEY = "commande-video:brouillon";
-  const STYLES = { tendance: "Concept tendance", studio: "Studio produit", mannequin: "Avec mannequin", surmesure: "Sur mesure" };
+  const STYLES = { studio: "Studio produit", mannequin: "Avec mannequin", tendance: "Concept tendance", surmesure: "Sur mesure" };
   const RECAP = { tendance: ["concept tendance", "concepts tendance"], studio: ["studio produit", "studio produit"], mannequin: ["avec mannequin", "avec mannequin"], surmesure: ["sur mesure", "sur mesure"] };
-  // Liens « Commander ce concept » du showreel : ?concept=…
-  const CONCEPTS = { foule: "La foule à vos couleurs", lancer: "Le lancer vers la caméra", danse: "La danse devant la boutique", autre: "Une autre tendance" };
   const X_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 
   const $ = (s, r) => (r || document).querySelector(s);
@@ -653,7 +645,7 @@ input[type="date"].input{min-height:52px;line-height:1.2}
   const fill = (parent, nodes) => { parent.textContent = ""; nodes.forEach(n => parent.appendChild(n)); };
 
   /* ---------- Nombre de vidéos par style ---------- */
-  const counts = { tendance: 0, studio: 0, mannequin: 0, surmesure: 0 };
+  const counts = { studio: 0, mannequin: 0, tendance: 0, surmesure: 0 };
   const total = () => Object.keys(counts).reduce((s, k) => s + counts[k], 0);
 
   function setCount(key, value, rewrite) {
@@ -692,7 +684,7 @@ input[type="date"].input{min-height:52px;line-height:1.2}
     $("#sum-unit").textContent = $("#tally-unit").textContent = unit;
     $("#sum-budget").textContent = budget || "—";
     $("#tally-budget").textContent = n ? "Budget indicatif : " + budget : "";
-    $("#f-concepts-wrap").hidden = !counts.tendance;
+    $("#f-tendance-wrap").hidden = !counts.tendance;
     $("#f-mannequins-wrap").hidden = !(counts.mannequin || counts.tendance);
     const list = allFiles();
     const size = list.reduce((s, f) => s + f.file.size, 0);
@@ -954,16 +946,18 @@ input[type="date"].input{min-height:52px;line-height:1.2}
     const fd = new FormData(form);
     const s = k => String(fd.get(k) || "").trim();
     let lien = s("lien");
+    // La tendance souhaitée arrive avec les précisions du projet
+    const idee = counts.tendance ? s("tendance_idee") : "";
     if (lien && !/^https?:\/\//i.test(lien)) lien = "https://" + lien;
     return {
       boutique: s("boutique"), ville: s("ville"), nom: s("nom"), email: s("email"), tel: s("tel"), instagram: s("instagram"),
-      videos: { tendance: counts.tendance, studio: counts.studio, mannequin: counts.mannequin, surmesure: counts.surmesure },
-      concepts: counts.tendance ? fd.getAll("concepts").map(String) : [],
+      videos: { studio: counts.studio, mannequin: counts.mannequin, tendance: counts.tendance, surmesure: counts.surmesure },
+      concepts: [],
       mannequins: counts.mannequin || counts.tendance ? s("mannequins") : "",
       montures: s("montures"),
       couleurs: colors.slice(), typos: s("typos"), lien: lien,
       ambiance: fd.getAll("ambiance").map(String), musique: s("musique"),
-      texte: s("texte"), precisions: s("precisions"), date: s("date"),
+      texte: s("texte"), precisions: [idee ? "Tendance qui m’inspire : " + idee : "", s("precisions")].filter(Boolean).join("\n\n"), date: s("date"),
       options: fd.getAll("options").map(String),
       hp: s("site_web")
     };
@@ -1127,7 +1121,6 @@ input[type="date"].input{min-height:52px;line-height:1.2}
       ["Boutique", d.boutique + ", " + d.ville],
       ["Vidéos", parts.join(" · ")]
     ];
-    if (d.concepts.length) rows.push(["Concepts", d.concepts.join(", ")]);
     rows.push(["Budget indicatif", euro(n * PRICE[0]) + " à " + euro(n * PRICE[1])]);
     rows.push(["Fichiers", sent.length ? plural(sent.length, "fichier reçu", "fichiers reçus") : failed.length ? "Aucun fichier reçu" : "Aucun fichier joint"]);
     $("#done-ref").textContent = ref ? "Commande envoyée · Réf. " + ref : "Commande envoyée";
@@ -1163,10 +1156,10 @@ input[type="date"].input{min-height:52px;line-height:1.2}
     const v = params.get(k);
     if (v && !form.elements[k].value) form.elements[k].value = v.slice(0, 80);
   });
-  const concept = CONCEPTS[params.get("concept")];
-  if (concept) {
-    if (!counts.tendance) setCount("tendance", 1);
-    $$('input[name="concepts"]', form).forEach(e => { if (e.value === concept) e.checked = true; });
+  // Lien depuis le showreel : ?style=tendance (ou studio, mannequin, surmesure) présélectionne une vidéo de ce style
+  const style = params.get("concept") ? "tendance" : params.get("style");
+  if (STYLES.hasOwnProperty(style) && !counts[style]) {
+    setCount(style, 1);
     saveDraft();
   }
   const now = new Date();

@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://sacharth.github.io/showreel-opticiens/">
 <meta property="og:title" content="Vos montures, stars des réseaux · Vidéos IA pour opticiens">
 <meta property="og:description" content="Concepts tendance, présentation studio, mise en scène avec mannequin : des vidéos verticales à votre logo pour Instagram, TikTok et votre vitrine. 15 à 20 € par vidéo.">
-<meta property="og:image" content="https://sacharth.github.io/showreel-opticiens/og.jpg?v=3">
+<meta property="og:image" content="https://sacharth.github.io/showreel-opticiens/og.jpg?v=4">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -48,6 +48,7 @@
 html{scroll-padding-top:84px}
 body{background:var(--bg);color:var(--text);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:inherit}
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 button{touch-action:manipulation}
 h1,h2,h3{margin:0;font-family:var(--display);color:var(--ink);font-weight:750;letter-spacing:-.02em}
 p{margin:0}
@@ -81,10 +82,10 @@ p{margin:0}
 @media (max-width:340px){.brand span{display:none}}
 
 /* En-tête */
-.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(32px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,96px) clamp(48px,7vw,96px)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,96px) clamp(48px,7vw,96px)}
 @media (max-width:900px){.hero{grid-template-columns:minmax(0,1fr)}}
 .hero-text{display:grid;gap:24px;justify-items:start}
-h1{font-size:clamp(44px,6.4vw,84px);line-height:1;font-weight:800;letter-spacing:-.035em}
+h1{font-size:clamp(44px,6vw,78px);line-height:1;font-weight:800;letter-spacing:-.035em}
 h1 .accent{display:block}
 .lede{max-width:40ch;font-size:clamp(18px,1.5vw,20px);line-height:1.6;color:var(--muted)}
 .actions{display:flex;flex-wrap:wrap;gap:12px}
@@ -94,11 +95,14 @@ h1 .accent{display:block}
 .facts span{display:block;margin-top:2px;font-size:15px;line-height:1.35;color:var(--muted)}
 @media (max-width:420px){.facts{grid-template-columns:minmax(0,1fr)}.facts li{display:flex;align-items:baseline;gap:10px}}
 
-.phone-wrap{display:grid;justify-items:center;gap:14px}
-.phone{width:min(330px,78vw);padding:10px;border-radius:44px;background:#141414;box-shadow:0 30px 60px -20px rgba(17,17,17,.45),0 0 0 1px rgba(17,17,17,.2)}
-.phone .media{border-radius:34px}
-.phone-caption{display:flex;align-items:center;gap:8px;font-size:15px;color:var(--muted)}
-.phone-caption b{color:var(--ink);font-weight:600}
+.hero-reel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.4vw,18px);align-items:end;width:100%;max-width:580px;justify-self:end;padding-top:32px}
+@media (max-width:900px){.hero-reel{justify-self:center;max-width:540px}}
+.reel{margin:0;display:grid;gap:10px}
+.phone{padding:6px;border-radius:30px;background:#141414;box-shadow:0 24px 48px -20px rgba(17,17,17,.45),0 0 0 1px rgba(17,17,17,.2)}
+.phone .media{border-radius:24px}
+.reel-mid{transform:translateY(-32px)}
+.reel figcaption{font:600 15.5px/1.3 var(--sans);color:var(--ink);text-align:center}
+@media (max-width:560px){.hero-reel{padding-top:20px}.phone{padding:4px;border-radius:20px}.phone .media{border-radius:16px}.reel-mid{transform:translateY(-16px)}.reel figcaption{font-size:14px}}
 
 /* Vignettes vidéo */
 .media{all:unset;box-sizing:border-box;position:relative;display:block;width:100%;aspect-ratio:9/16;overflow:hidden;border-radius:var(--radius);background:#1f1e1c;cursor:pointer;isolation:isolate}
@@ -134,8 +138,6 @@ h2{font-size:clamp(34px,4.4vw,56px);line-height:1.04}
 .concept p{font-size:16.5px;line-height:1.6;color:var(--on-dark-muted)}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 0;padding:0;list-style:none}
 .tags li{padding:5px 12px;border-radius:999px;border:1px solid #3b3935;font:500 14px/1.3 var(--sans);color:var(--on-dark)}
-.more{display:inline-flex;align-items:center;gap:8px;margin-top:4px;font:600 16px/1.3 var(--sans);color:#fff;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.25em;text-decoration-color:var(--accent-on-dark)}
-.more:hover{color:var(--accent-on-dark)}
 .concept-cta{align-content:center;justify-items:start;gap:16px;padding:clamp(24px,3vw,36px);border-radius:var(--radius);border:1px dashed #4a4843;background:transparent}
 @media (max-width:1000px){.concept-cta{grid-column:1/-1}}
 .concept-cta p{color:var(--on-dark-muted)}
@@ -217,8 +219,8 @@ h2{font-size:clamp(34px,4.4vw,56px);line-height:1.04}
       <span>Showreel opticiens</span>
     </a>
     <nav class="nav" aria-label="Sections">
-      <a href="#concepts">Concepts tendance</a>
       <a href="#exemples">Exemples</a>
+      <a href="#concepts">Tendances</a>
       <a href="#tarif">Tarif</a>
       <a href="#contact">Contact</a>
       <a class="btn btn-primary order-link" href="commande/">Commander</a>
@@ -232,10 +234,10 @@ h2{font-size:clamp(34px,4.4vw,56px);line-height:1.04}
       <div class="hero-text">
         <span class="pill"><span class="dot" aria-hidden="true"></span>Vidéos IA pour opticiens</span>
         <h1 id="h-hero">Vos montures, <span class="accent">stars des réseaux.</span></h1>
-        <p class="lede">Des vidéos verticales créées par IA à partir de vos montures et de votre logo&nbsp;: concepts tendance, présentation studio ou mise en scène avec mannequin. Prêtes pour Instagram, TikTok et l’écran de votre vitrine.</p>
+        <p class="lede">Des vidéos verticales créées par IA à partir de vos montures et de votre logo&nbsp;: présentation studio, mise en scène avec mannequin ou concept tendance. Prêtes pour Instagram, TikTok et l’écran de votre vitrine.</p>
         <div class="actions">
           <a class="btn btn-primary order-link" href="commande/">Commander vos vidéos</a>
-          <a class="btn btn-ghost" href="#concepts">Voir les concepts tendance</a>
+          <a class="btn btn-ghost" href="#exemples">Voir les exemples</a>
         </div>
         <ul class="facts">
           <li><b>15–20&nbsp;€</b><span>par vidéo</span></li>
@@ -243,87 +245,27 @@ h2{font-size:clamp(34px,4.4vw,56px);line-height:1.04}
           <li><b>≈&nbsp;12&nbsp;s</b><span>musique originale</span></li>
         </ul>
       </div>
-      <div class="phone-wrap">
-        <div class="phone">
-          <button type="button" class="media" data-clip="26" aria-label="Regarder « La danse devant la boutique » avec le son">
-            <img src="films/26.jpg" alt="">
-            <video muted loop playsinline preload="none" poster="films/26.jpg" data-src="films/26.mp4"></video>
-            <span class="badge">Tendance</span>
-          </button>
-        </div>
-        <p class="phone-caption"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg><span>Concept tendance · <b>La danse devant la boutique</b></span></p>
+      <div class="hero-reel">
+        <figure class="reel">
+          <div class="phone"><button type="button" class="media" data-clip="21" aria-label="Regarder un exemple studio produit avec le son"><img src="films/21.jpg" alt=""><video muted loop playsinline preload="none" poster="films/21.jpg" data-src="films/21.mp4"></video></button></div>
+          <figcaption>Studio produit</figcaption>
+        </figure>
+        <figure class="reel reel-mid">
+          <div class="phone"><button type="button" class="media" data-clip="16" aria-label="Regarder un exemple avec mannequin avec le son"><img src="films/16.jpg" alt=""><video muted loop playsinline preload="none" poster="films/16.jpg" data-src="films/16.mp4"></video></button></div>
+          <figcaption>Avec mannequin</figcaption>
+        </figure>
+        <figure class="reel">
+          <div class="phone"><button type="button" class="media" data-clip="26" aria-label="Regarder un exemple de concept tendance avec le son"><img src="films/26.jpg" alt=""><video muted loop playsinline preload="none" poster="films/26.jpg" data-src="films/26.mp4"></video></button></div>
+          <figcaption>Concept tendance</figcaption>
+        </figure>
       </div>
     </section>
   </div>
 
-  <section class="section dark" id="concepts" aria-labelledby="h-concepts">
+  <section class="section" id="exemples" aria-labelledby="h-exemples" style="padding-top:clamp(24px,4vw,48px)">
     <div class="wrap">
       <div class="section-head">
-        <span class="pill"><span class="dot" aria-hidden="true"></span>Nouveau · Concepts tendance</span>
-        <h2 id="h-concepts">Les formats qui cartonnent sur les réseaux, à vos couleurs.</h2>
-        <p class="section-lede">Chaque concept reprend une tendance virale d’Instagram ou de TikTok et la met en scène avec vos montures, votre logo et votre boutique.</p>
-      </div>
-
-      <article class="concept concept-wide">
-        <button type="button" class="media wide" data-clip="24" aria-label="Regarder « La foule à vos couleurs » avec le son">
-          <img src="films/24.jpg" alt="" loading="lazy">
-          <video muted loop playsinline preload="none" poster="films/24.jpg" data-src="films/24.mp4"></video>
-          <span class="badge">Tendance</span>
-          <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg><span>Voir avec le son</span></span>
-        </button>
-        <div class="concept-body">
-          <p class="concept-kicker">Effet foule</p>
-          <h3>La foule à vos couleurs</h3>
-          <p>Des dizaines de silhouettes en veste blanche siglée de votre logo, lunettes de soleil sur le nez, s’inclinent d’un même geste au passage d’un client. L’effet waouh pour lancer une collection ou animer l’écran de votre vitrine.</p>
-          <ul class="tags"><li>Écran de vitrine</li><li>YouTube</li><li>Format paysage</li></ul>
-          <a class="more order-link" href="commande/?concept=foule">Commander ce concept <span aria-hidden="true">→</span></a>
-        </div>
-      </article>
-
-      <div class="concept-grid">
-        <article class="concept">
-          <button type="button" class="media" data-clip="25" aria-label="Regarder « Le lancer vers la caméra » avec le son">
-            <img src="films/25.jpg" alt="" loading="lazy">
-            <video muted loop playsinline preload="none" poster="films/25.jpg" data-src="films/25.mp4"></video>
-            <span class="badge">Tendance</span>
-            <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg><span>Voir avec le son</span></span>
-          </button>
-          <div class="concept-body">
-            <p class="concept-kicker">Transition</p>
-            <h3>Le lancer vers la caméra</h3>
-            <p>Une passante en tenue chic&nbsp;: ses solaires s’envolent vers l’objectif, puis son sac à votre logo. Une transition qui accroche pour présenter une nouveauté.</p>
-            <ul class="tags"><li>Reels</li><li>Stories</li><li>TikTok</li></ul>
-            <a class="more order-link" href="commande/?concept=lancer">Commander ce concept <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-        <article class="concept">
-          <button type="button" class="media" data-clip="26" aria-label="Regarder « La danse devant la boutique » avec le son">
-            <img src="films/26.jpg" alt="" loading="lazy">
-            <video muted loop playsinline preload="none" poster="films/26.jpg" data-src="films/26.mp4"></video>
-            <span class="badge">Tendance</span>
-            <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg><span>Voir avec le son</span></span>
-          </button>
-          <div class="concept-body">
-            <p class="concept-kicker">Trend danse</p>
-            <h3>La danse devant la boutique</h3>
-            <p>Un client sort de votre boutique, pose son sac à votre logo et enchaîne la danse du moment devant votre enseigne. Un format taillé pour TikTok et les Reels.</p>
-            <ul class="tags"><li>TikTok</li><li>Reels</li></ul>
-            <a class="more order-link" href="commande/?concept=danse">Commander ce concept <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-        <aside class="concept concept-cta" aria-labelledby="h-idea">
-          <h3 id="h-idea">Une tendance en tête&nbsp;?</h3>
-          <p>Envoyez-moi le lien d’une vidéo qui vous plaît sur Instagram ou TikTok&nbsp;: je l’adapte à vos montures et à votre boutique.</p>
-          <a class="btn btn-ghost order-link" href="commande/?concept=autre">Proposer une idée</a>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="exemples" aria-labelledby="h-exemples">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="pill">Les classiques</span>
+        <span class="pill">Exemples</span>
         <h2 id="h-exemples">Studio produit et mannequin</h2>
         <p class="section-lede">Je pars des références exactes de vos montures pour créer une présentation studio de la paire seule, ou une mise en scène avec mannequin.</p>
       </div>
@@ -341,8 +283,74 @@ h2{font-size:clamp(34px,4.4vw,56px);line-height:1.04}
         </div>
         <div class="grid" data-group="mannequin"></div>
       </div>
+    </div>
+  </section>
 
-      <div class="services">
+  <section class="section dark" id="concepts" aria-labelledby="h-concepts">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="pill"><span class="dot" aria-hidden="true"></span>Concepts tendance</span>
+        <h2 id="h-concepts">Les tendances des réseaux, adaptées à votre boutique.</h2>
+        <p class="section-lede">Je reprends les formats viraux du moment sur Instagram et TikTok et je les adapte à vos montures, à votre logo et à votre boutique. Voici trois exemples de ce qui est faisable&nbsp;: chaque vidéo est créée sur mesure, à partir de la tendance que vous choisissez.</p>
+      </div>
+
+      <article class="concept concept-wide">
+        <button type="button" class="media wide" data-clip="24" aria-label="Regarder l’exemple effet foule avec le son">
+          <img src="films/24.jpg" alt="" loading="lazy">
+          <video muted loop playsinline preload="none" poster="films/24.jpg" data-src="films/24.mp4"></video>
+          <span class="badge">Exemple</span>
+          <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg><span>Voir avec le son</span></span>
+        </button>
+        <div class="concept-body">
+          <p class="concept-kicker">Exemple · effet foule</p>
+          <h3>Une foule à vos couleurs</h3>
+          <p>Des dizaines de silhouettes en veste blanche siglée de votre logo, lunettes de soleil sur le nez, s’inclinent d’un même geste au passage d’un client. Idéal pour un lancement de collection ou l’écran de votre vitrine.</p>
+          <ul class="tags"><li>Écran de vitrine</li><li>YouTube</li><li>Format paysage</li></ul>
+        </div>
+      </article>
+
+      <div class="concept-grid">
+        <article class="concept">
+          <button type="button" class="media" data-clip="25" aria-label="Regarder l’exemple de transition avec le son">
+            <img src="films/25.jpg" alt="" loading="lazy">
+            <video muted loop playsinline preload="none" poster="films/25.jpg" data-src="films/25.mp4"></video>
+            <span class="badge">Exemple</span>
+            <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg><span>Voir avec le son</span></span>
+          </button>
+          <div class="concept-body">
+            <p class="concept-kicker">Exemple · transition</p>
+            <h3>Un lancer vers la caméra</h3>
+            <p>Une passante en tenue chic&nbsp;: ses solaires s’envolent vers l’objectif, puis son sac à votre logo. Une transition qui accroche pour présenter une nouveauté.</p>
+            <ul class="tags"><li>Reels</li><li>Stories</li><li>TikTok</li></ul>
+          </div>
+        </article>
+        <article class="concept">
+          <button type="button" class="media" data-clip="26" aria-label="Regarder l’exemple de danse avec le son">
+            <img src="films/26.jpg" alt="" loading="lazy">
+            <video muted loop playsinline preload="none" poster="films/26.jpg" data-src="films/26.mp4"></video>
+            <span class="badge">Exemple</span>
+            <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg><span>Voir avec le son</span></span>
+          </button>
+          <div class="concept-body">
+            <p class="concept-kicker">Exemple · trend danse</p>
+            <h3>Une danse devant la boutique</h3>
+            <p>Un client sort de votre boutique, pose son sac à votre logo et enchaîne la danse du moment devant votre enseigne. Un format taillé pour TikTok et les Reels.</p>
+            <ul class="tags"><li>TikTok</li><li>Reels</li></ul>
+          </div>
+        </article>
+        <aside class="concept concept-cta" aria-labelledby="h-idea">
+          <h3 id="h-idea">Votre tendance, à vos couleurs</h3>
+          <p>Choisissez une tendance qui vous plaît sur Instagram ou TikTok, ou laissez-moi vous proposer celles du moment&nbsp;: j’adapte le concept à vos montures et à votre boutique.</p>
+          <a class="btn btn-ghost order-link" href="commande/?style=tendance">Demander un concept tendance</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-services">
+    <div class="wrap">
+      <h2 id="h-services" class="sr">Autres services</h2>
+      <div class="services" style="margin-top:0">
         <article class="card">
           <h3>Tout style de vidéo</h3>
           <p>Une autre ambiance, un décor à vos couleurs, une vidéo de saison, le lancement d’une collection… Décrivez votre idée, nous regardons ensemble ce qui est réalisable.</p>
@@ -367,7 +375,7 @@ h2{font-size:clamp(34px,4.4vw,56px);line-height:1.04}
         <ul class="includes">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><b>Vous envoyez</b><span>Les références de vos montures (marque, modèle, coloris) et votre logo.</span></div></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><b>Je livre</b><span>Des MP4 verticaux prêts pour les réseaux et l’écran en boutique.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><b>Styles</b><span>Concepts tendance, studio produit, mannequin ou sur mesure.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><b>Styles</b><span>Studio produit, mannequin, concept tendance ou sur mesure.</span></div></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><b>En option</b><span>Publication et campagnes Meta Ads, sur devis.</span></div></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><b>Exemples</b><span>« Votre logo » et « votre boutique » sont remplacés par votre logo et votre enseigne.</span></div></li>
         </ul>
@@ -423,9 +431,6 @@ h2{font-size:clamp(34px,4.4vw,56px);line-height:1.04}
 
 <script>
 const CLIPS = [
-  {id:"24", title:"La foule à vos couleurs", ref:"Concept tendance · effet foule · format paysage", wide:true},
-  {id:"25", title:"Le lancer vers la caméra", ref:"Concept tendance · transition"},
-  {id:"26", title:"La danse devant la boutique", ref:"Concept tendance · trend danse"},
   {id:"20", group:"studio", title:"Silver Details", ref:"Saint Laurent · SL 934 MIA 003"},
   {id:"21", group:"studio", title:"Black Acetate", ref:"Bottega Veneta · BV1494S 001"},
   {id:"22", group:"studio", title:"Oblique Details", ref:"Dior · Oblique S5I"},
@@ -433,7 +438,10 @@ const CLIPS = [
   {id:"16", group:"mannequin", title:"Silver Passage", ref:"Saint Laurent · SL 934 MIA 003"},
   {id:"17", group:"mannequin", title:"Black Sculpture", ref:"Bottega Veneta · BV1494S 001"},
   {id:"18", group:"mannequin", title:"Blue Geometry", ref:"Dior · Oblique S5I"},
-  {id:"19", group:"mannequin", title:"Golden Frame", ref:"Chanel · 4286-T C395/S3"}
+  {id:"19", group:"mannequin", title:"Golden Frame", ref:"Chanel · 4286-T C395/S3"},
+  {id:"24", title:"Une foule à vos couleurs", ref:"Exemple de concept tendance · effet foule · format paysage", wide:true},
+  {id:"25", title:"Un lancer vers la caméra", ref:"Exemple de concept tendance · transition"},
+  {id:"26", title:"Une danse devant la boutique", ref:"Exemple de concept tendance · trend danse"}
 ];
 const playSvg = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>';
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
